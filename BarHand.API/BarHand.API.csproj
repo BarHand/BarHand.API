@@ -15,10 +15,8 @@
 
     <ItemGroup>
       <Folder Include="Inventory\Controllers" />
-      <Folder Include="Inventory\Domain\Repositories" />
       <Folder Include="Inventory\Domain\Services\Communication" />
       <Folder Include="Inventory\Mapping" />
-      <Folder Include="Inventory\Persistence\Repositories" />
       <Folder Include="Inventory\Services" />
       <Folder Include="Shared\Domain\Services\Communication" />
       <Folder Include="Shared\Extensions" />
