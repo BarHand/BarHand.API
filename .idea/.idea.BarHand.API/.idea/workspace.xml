@@ -5,15 +5,23 @@
     <projectFile profileName="IIS Express">BarHand.API/BarHand.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="chore: added mysql connection string.">
+    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="chore: added needed package dependencies">
+      <change afterPath="$PROJECT_DIR$/BarHand.API/Inventory/Domain/Models/Product.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarHand.API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarHand.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -24,16 +32,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.BarHand.API">
     <configuration name="BarHand.API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" />
@@ -75,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667063322114</updated>
       <workItem from="1667063332784" duration="2011000" />
+      <workItem from="1667239613518" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667063373422</created>
@@ -104,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667064989742</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="chore: added needed package dependencies">
+      <created>1667239666161</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667239666161</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +145,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="chore: Added needed package dependencies." />
     <MESSAGE value="chore: added mysql connection string." />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: added mysql connection string." />
+    <MESSAGE value="chore: added needed package dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: added needed package dependencies" />
   </component>
 </project>
