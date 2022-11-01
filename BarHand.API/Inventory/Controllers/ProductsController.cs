@@ -3,7 +3,7 @@ using AutoMapper;
 using BarHand.API.Inventory.Domain.Models;
 using BarHand.API.Inventory.Domain.Services;
 using BarHand.API.Inventory.Resources;
-using BarHand.API.Inventory.Services;
+using BarHand.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BarHand.API.Inventory.Controllers;
@@ -28,5 +28,53 @@ public class ProductsController:ControllerBase
         var products = await _productService.ListAsync();
         var resources = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductResource>>(products);
         return resources;
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> PostAsync([FromBody] SaveProductResource resource)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState.GetErrorMessages());
+
+        var product = _mapper.Map<SaveProductResource, Product>(resource);
+
+        var result = await _productService.SaveAsync(product);
+
+        if (!result.Success)
+            return BadRequest(result.Message);
+
+        var productResource = _mapper.Map<Product, ProductResource>(result.Resource);
+        return Created(nameof(PostAsync),productResource);
+    }
+    
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutAsync(int id, [FromBody] SaveProductResource resource)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState.GetErrorMessages());
+        
+        var product = _mapper.Map<SaveProductResource, Product>(resource);
+
+        var result = await _productService.UpdateAsync(id, product);
+        
+        if (!result.Success)
+            return BadRequest(result.Message);
+
+        var productResource = _mapper.Map<Product, ProductResource>(result.Resource);
+
+        return Ok(productResource);
+    }
+    
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteAsync(int id)
+    {
+        var result = await _productService.DeleteAsync(id);
+        
+        if (!result.Success)
+            return BadRequest(result.Message);
+
+        var productResource = _mapper.Map<Product, ProductResource>(result.Resource);
+
+        return Ok(productResource);
     }
 }
