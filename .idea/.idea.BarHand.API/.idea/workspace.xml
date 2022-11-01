@@ -5,11 +5,9 @@
     <projectFile profileName="IIS Express">BarHand.API/BarHand.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="chore: added needed package dependencies">
-      <change afterPath="$PROJECT_DIR$/BarHand.API/Inventory/Domain/Models/Product.cs" afterDir="false" />
+    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="chore: removed useless classes.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarHand.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarHand.API/Inventory/Controllers/ProductsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Inventory/Controllers/ProductsController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,11 @@
         <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Inventory/Controllers/ProductsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Inventory/Resources/ProductResource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Shared/Persistence/Contexts/AppDbContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -83,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667063322114</updated>
       <workItem from="1667063332784" duration="2011000" />
-      <workItem from="1667239613518" duration="640000" />
+      <workItem from="1667239613518" duration="13957000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667063373422</created>
@@ -120,7 +123,112 @@
       <option name="project" value="LOCAL" />
       <updated>1667239666161</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat(products): added product entity.">
+      <created>1667240276841</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667240276841</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(products): added object-relational mapping constrain rules.">
+      <created>1667241074865</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667241074865</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chore: added base repository">
+      <created>1667241238856</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667241238856</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chore: implemented unit of work">
+      <created>1667241579884</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667241579884</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat(products): implemented products repository.">
+      <created>1667245751051</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667245751051</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chore: created base responsive">
+      <created>1667247509895</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667247509895</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat(products): created product service standard response.">
+      <created>1667247656846</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667247656846</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat(products): implement product service.">
+      <created>1667314150793</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667314150793</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat(products): added initial action for products controller.">
+      <created>1667315978731</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667315978731</updated>
+    </task>
+    <task id="LOCAL-00015" summary="chore: added string extension for transforming text to snake case format.">
+      <created>1667324496994</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1667324496994</updated>
+    </task>
+    <task id="LOCAL-00016" summary="chore: added extension to model builder for snake case naming support.">
+      <created>1667325423159</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1667325423159</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat(products): added resource types for product.">
+      <created>1667325990270</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667325990270</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat(products): added incoming and outgoing mapping configuration for product.">
+      <created>1667326371670</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667326371670</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat(products): added resource conversion for getting all products; also created extension for mode state to ease in order to error messages handling">
+      <created>1667327639470</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1667327639470</updated>
+    </task>
+    <task id="LOCAL-00020" summary="chore: removed useless classes.">
+      <created>1667327828802</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1667327828802</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +254,21 @@
     <MESSAGE value="chore: Added needed package dependencies." />
     <MESSAGE value="chore: added mysql connection string." />
     <MESSAGE value="chore: added needed package dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: added needed package dependencies" />
+    <MESSAGE value="feat(products): added product entity." />
+    <MESSAGE value="feat(products): added object-relational mapping constrain rules." />
+    <MESSAGE value="chore: added base repository" />
+    <MESSAGE value="chore: implemented unit of work" />
+    <MESSAGE value="feat(products): implemented products repository." />
+    <MESSAGE value="chore: created base responsive" />
+    <MESSAGE value="feat(products): created product service standard response." />
+    <MESSAGE value="feat(products): implement product service." />
+    <MESSAGE value="feat(products): added initial action for products controller." />
+    <MESSAGE value="chore: added string extension for transforming text to snake case format." />
+    <MESSAGE value="chore: added extension to model builder for snake case naming support." />
+    <MESSAGE value="feat(products): added resource types for product." />
+    <MESSAGE value="feat(products): added incoming and outgoing mapping configuration for product." />
+    <MESSAGE value="feat(products): added resource conversion for getting all products; also created extension for mode state to ease in order to error messages handling" />
+    <MESSAGE value="chore: removed useless classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: removed useless classes." />
   </component>
 </project>
