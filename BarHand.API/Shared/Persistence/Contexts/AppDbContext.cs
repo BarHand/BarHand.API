@@ -1,4 +1,5 @@
 ﻿using BarHand.API.Inventory.Domain.Models;
+using BarHand.API.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace BarHand.API.Shared.Persistence.Contexts;
@@ -23,5 +24,7 @@ public class AppDbContext : DbContext
             .IsRequired().ValueGeneratedOnAdd();// is required
         builder.Entity<Product>().Property(p => p.Name)
             .IsRequired().HasMaxLength(30);//tamaño max de 30 
+        
+        builder.UseSnakeCaseNamingConvention();
     }
 }
