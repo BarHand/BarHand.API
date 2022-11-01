@@ -16,7 +16,6 @@
     <ItemGroup>
       <Folder Include="Inventory\Controllers" />
       <Folder Include="Inventory\Mapping" />
-      <Folder Include="Inventory\Services" />
       <Folder Include="Shared\Extensions" />
     </ItemGroup>
 
