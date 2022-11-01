@@ -1,6 +1,4 @@
-﻿
-
-namespace BarHand.API.Inventory.Resources;
+﻿namespace BarHand.API.Inventory.Resources;
 
 public class ProductResource
 {
