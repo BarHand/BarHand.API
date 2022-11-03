@@ -5,6 +5,10 @@ using BarHand.API.Inventory.Services;
 using BarHand.API.Shared.Domain.Repositories;
 using BarHand.API.Shared.Persistence.Contexts;
 using BarHand.API.Shared.Persistence.Repositories;
+using BarHand.API.Suppliers.Domain.Repositories;
+using BarHand.API.Suppliers.Domain.Services;
+using BarHand.API.Suppliers.Persistence.Repositories;
+using BarHand.API.Suppliers.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -44,7 +48,8 @@ builder.Services.AddAutoMapper(
     typeof(BarHand.API.Inventory.Mapping.ModelToResourceProfile),
     typeof(BarHand.API.Inventory.Mapping.ResourceToModelProfile));
 //Suppliers
-
+builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
+builder.Services.AddScoped<ISupplierService, SupplierService>();
 //Stores
 
 var app = builder.Build();
