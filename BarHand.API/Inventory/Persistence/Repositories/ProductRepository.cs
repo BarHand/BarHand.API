@@ -32,8 +32,8 @@ public class ProductRepository : BaseRepository , IProductRepository
     public async Task<Product> FindByTitleAsync(string title)
     {
         return await _context.Products
-            .Include(p => p.Category)
-            .FirstOrDefaultAsync(p => p.Name == title);
+            .Include(p => p.Supplier)
+            .FirstOrDefaultAsync(p => p.Name == title); 
     }
 
     public async Task<IEnumerable<Product>> FindBySupplierIdAsync(long supplierId)
