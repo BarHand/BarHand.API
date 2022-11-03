@@ -6,7 +6,7 @@ namespace BarHand.API.Inventory.Mapping;
 
 public class ModelToResourceProfile:Profile
 {
-    protected ModelToResourceProfile()
+    public ModelToResourceProfile()
     {
         CreateMap<Product, ProductResource>();
     }
