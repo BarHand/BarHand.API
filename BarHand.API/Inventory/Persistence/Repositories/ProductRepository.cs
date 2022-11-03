@@ -14,7 +14,9 @@ public class ProductRepository : BaseRepository , IProductRepository
 
     public async Task<IEnumerable<Product>> ListAsync()
     {
-        return await _context.Products.ToListAsync();
+        return await _context.Products
+            .Include(p => p.Supplier)
+            .ToListAsync();
     }
 
     public async Task AddAsync(Product product)
@@ -22,10 +24,26 @@ public class ProductRepository : BaseRepository , IProductRepository
         await _context.Products.AddAsync(product);
     }
 
-    public async Task<Product> FindByAsync(int id)
+    public async Task<Product> FindByAsync(long id)
     {
         return await _context.Products.FindAsync(id);
     }
+
+    public async Task<Product> FindByTitleAsync(string title)
+    {
+        return await _context.Products
+            .Include(p => p.Category)
+            .FirstOrDefaultAsync(p => p.Name == title);
+    }
+
+    public async Task<IEnumerable<Product>> FindBySupplierIdAsync(long supplierId)
+    {
+        return await _context.Products
+            .Where(p => p.SupplierId == supplierId)
+            .Include(p => p.Supplier)
+            .ToListAsync();
+    }
+    
 
     public void Update(Product product)
     {

@@ -16,13 +16,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Supplier\Controllers" />
-      <Folder Include="Supplier\Domain\Repositories" />
-      <Folder Include="Supplier\Domain\Services" />
-      <Folder Include="Supplier\Mapping" />
-      <Folder Include="Supplier\Persistence\Repositories" />
-      <Folder Include="Supplier\Resources" />
-      <Folder Include="Supplier\Services" />
+      <Folder Include="Suppliers\Controllers" />
+      <Folder Include="Suppliers\Domain\Services" />
+      <Folder Include="Suppliers\Mapping" />
+      <Folder Include="Suppliers\Persistence\Repositories" />
+      <Folder Include="Suppliers\Resources" />
+      <Folder Include="Suppliers\Services" />
     </ItemGroup>
 
 </Project>
