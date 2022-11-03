@@ -8,7 +8,7 @@ public interface IProductRepository
 {
     Task<IEnumerable<Product>> ListAsync();
     Task AddAsync(Product product);
-    Task<Product> FindByAsync(long id);
+    Task<Product> FindByIdAsync(long id);
     Task<Product> FindByTitleAsync(string title);
     Task<IEnumerable<Product>> FindBySupplierIdAsync(long supplierId);
     void Update(Product product);
