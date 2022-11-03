@@ -23,7 +23,16 @@ public class AppDbContext : DbContext
         builder.Entity<Product>().Property(p => p.Id)
             .IsRequired().ValueGeneratedOnAdd();// is required
         builder.Entity<Product>().Property(p => p.Name)
-            .IsRequired().HasMaxLength(30);//tamaño max de 30 
+            .IsRequired().HasMaxLength(200);//tamaño max de 200 
+        builder.Entity<Product>().Property(p => p.Category)
+            .IsRequired().HasMaxLength(200);
+        builder.Entity<Product>().Property(p => p.Description)
+            .IsRequired().HasMaxLength(200);;
+        builder.Entity<Product>().Property(p => p.NumberOfSales)
+            .IsRequired();
+        builder.Entity<Product>().Property(p => p.Available)
+            .IsRequired();
+        
         
         builder.UseSnakeCaseNamingConvention();
     }
