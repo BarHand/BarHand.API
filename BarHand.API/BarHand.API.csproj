@@ -18,7 +18,6 @@
     <ItemGroup>
       <Folder Include="Suppliers\Controllers" />
       <Folder Include="Suppliers\Mapping" />
-      <Folder Include="Suppliers\Resources" />
     </ItemGroup>
 
 </Project>

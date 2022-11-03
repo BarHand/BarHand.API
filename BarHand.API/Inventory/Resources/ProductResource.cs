@@ -1,4 +1,6 @@
-﻿namespace BarHand.API.Inventory.Resources;
+﻿using BarHand.API.Suppliers.Resources;
+
+namespace BarHand.API.Inventory.Resources;
 
 public class ProductResource
 {
@@ -9,5 +11,7 @@ public class ProductResource
     public int NumberOfSales { get; set; }
     public bool Available { get; set; }
     public long SupplierId { get; set; }
+    
+    public SupplierResource Supplier { get; set; }
 
 }
