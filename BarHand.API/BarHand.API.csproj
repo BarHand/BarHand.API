@@ -19,7 +19,6 @@
       <Folder Include="Suppliers\Controllers" />
       <Folder Include="Suppliers\Domain\Services" />
       <Folder Include="Suppliers\Mapping" />
-      <Folder Include="Suppliers\Persistence\Repositories" />
       <Folder Include="Suppliers\Resources" />
       <Folder Include="Suppliers\Services" />
     </ItemGroup>
