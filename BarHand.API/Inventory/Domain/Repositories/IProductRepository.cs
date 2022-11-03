@@ -1,4 +1,6 @@
-﻿using BarHand.API.Inventory.Domain.Models;
+﻿
+
+using BarHand.API.Inventory.Domain.Models;
 
 namespace BarHand.API.Inventory.Domain.Repositories;
 

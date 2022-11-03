@@ -17,4 +17,6 @@ public class SaveProductResource
     public int NumberOfSales { get; set; }
     [Required]
     public bool Available { get; set; }
+    [Required]
+    public long SupplierId { get; set; }
 }

@@ -8,4 +8,6 @@ public class ProductResource
     public string Description { get; set; }
     public int NumberOfSales { get; set; }
     public bool Available { get; set; }
+    public long SupplierId { get; set; }
+
 }
