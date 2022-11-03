@@ -7,7 +7,7 @@ public interface ISupplierService
 {
     Task<IEnumerable<Supplier>> ListAsync();
     Task<SupplierResponse> GetByIdAsync(long id);
-    Task<SupplierResponse> SaveAsync(Supplier product);
-    Task<SupplierResponse> UpdateAsync(int id, Supplier product);
+    Task<SupplierResponse> SaveAsync(Supplier supplier);
+    Task<SupplierResponse> UpdateAsync(long supplierId, Supplier supplier);
     Task<SupplierResponse> DeleteAsync(int id);
 }

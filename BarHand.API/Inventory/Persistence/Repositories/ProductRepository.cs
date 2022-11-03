@@ -24,7 +24,7 @@ public class ProductRepository : BaseRepository , IProductRepository
         await _context.Products.AddAsync(product);
     }
 
-    public async Task<Product> FindByAsync(long id)
+    public async Task<Product> FindByIdAsync(long id)
     {
         return await _context.Products.FindAsync(id);
     }

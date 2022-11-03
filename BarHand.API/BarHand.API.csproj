@@ -19,7 +19,6 @@
       <Folder Include="Suppliers\Controllers" />
       <Folder Include="Suppliers\Mapping" />
       <Folder Include="Suppliers\Resources" />
-      <Folder Include="Suppliers\Services" />
     </ItemGroup>
 
 </Project>
