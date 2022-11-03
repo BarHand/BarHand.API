@@ -23,6 +23,11 @@ public class ProductService: IProductService
         return await _productRepository.ListAsync();
     }
 
+    public async Task<IEnumerable<Product>> ListBySupplierIdAsync(long supplierId)
+    {
+        return await _productRepository.FindBySupplierIdAsync(supplierId);
+    }
+
     public async Task<ProductResponse> SaveAsync(Product product)
     {
         try
