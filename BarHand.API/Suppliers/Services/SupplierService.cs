@@ -68,7 +68,7 @@ public class SupplierService:ISupplierService
         }
     }
 
-    public async Task<SupplierResponse> DeleteAsync(int id)
+    public async Task<SupplierResponse> DeleteAsync(long id)
     {
         var existingSupplier = await _supplierRepository.FindByIdAsync(id);
 

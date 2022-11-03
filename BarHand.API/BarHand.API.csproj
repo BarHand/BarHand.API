@@ -16,7 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Suppliers\Controllers" />
       <Folder Include="Suppliers\Mapping" />
     </ItemGroup>
 

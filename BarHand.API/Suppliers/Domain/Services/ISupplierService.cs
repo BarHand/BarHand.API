@@ -9,5 +9,5 @@ public interface ISupplierService
     Task<SupplierResponse> GetByIdAsync(long id);
     Task<SupplierResponse> SaveAsync(Supplier supplier);
     Task<SupplierResponse> UpdateAsync(long supplierId, Supplier supplier);
-    Task<SupplierResponse> DeleteAsync(int id);
+    Task<SupplierResponse> DeleteAsync(long id);
 }
