@@ -16,6 +16,7 @@
 
     <ItemGroup>
       <Folder Include="Stores\Controllers" />
+      <Folder Include="Stores\Domain" />
     </ItemGroup>
 
 </Project>
