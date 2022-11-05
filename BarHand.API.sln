@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarHand.API", "BarHand.API\BarHand.API.csproj", "{BD499CCC-9F4D-4838-B1C2-BB32BE3AA262}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarHand.API.Test", "BarHand.API.Test\BarHand.API.Test.csproj", "{A1C7F7C9-E923-4E0C-A7DB-BB1E22C5D4BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{BD499CCC-9F4D-4838-B1C2-BB32BE3AA262}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD499CCC-9F4D-4838-B1C2-BB32BE3AA262}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD499CCC-9F4D-4838-B1C2-BB32BE3AA262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1C7F7C9-E923-4E0C-A7DB-BB1E22C5D4BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C7F7C9-E923-4E0C-A7DB-BB1E22C5D4BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C7F7C9-E923-4E0C-A7DB-BB1E22C5D4BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C7F7C9-E923-4E0C-A7DB-BB1E22C5D4BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

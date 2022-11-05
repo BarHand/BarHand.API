@@ -6,7 +6,7 @@ using BarHand.API.Inventory.Resources;
 using BarHand.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BarHand.API.Inventory.Controllers;
+namespace BarHand.API.Inventory.Interfaces.Rest.Controllers;
 
 [ApiController]
 [Route("/api/v1/[controller]")]
