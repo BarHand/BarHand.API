@@ -5,9 +5,7 @@
     <projectFile profileName="IIS Express">BarHand.API/BarHand.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="feat(products)added object-relational-mapping configuration for products">
-      <change beforePath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="feat(stores): added store repository" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +79,7 @@
       <updated>1667063322114</updated>
       <workItem from="1667063332784" duration="2011000" />
       <workItem from="1667239613518" duration="13957000" />
-      <workItem from="1667622144786" duration="5933000" />
+      <workItem from="1667622144786" duration="6268000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667063373422</created>
@@ -335,7 +333,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667628995704</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="feat(stores):added store repository">
+      <created>1667629217941</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1667629217941</updated>
+    </task>
+    <task id="LOCAL-00038" summary="feat(stores): added store repository">
+      <created>1667629442896</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1667629442896</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +368,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="chore: added mysql connection string." />
     <MESSAGE value="chore: added needed package dependencies" />
     <MESSAGE value="feat(products): added product entity." />
     <MESSAGE value="feat(products): added object-relational mapping constrain rules." />
@@ -373,7 +384,6 @@
     <MESSAGE value="feat(products): added incoming and outgoing mapping configuration for product." />
     <MESSAGE value="feat(products): added resource conversion for getting all products; also created extension for mode state to ease in order to error messages handling" />
     <MESSAGE value="chore: removed useless classes." />
-    <MESSAGE value="feat(stores): added store repository" />
     <MESSAGE value="feat(store): implemented object mapping configuration" />
     <MESSAGE value="feat(products): added object-relational-mapping configuration for products" />
     <MESSAGE value="feat(store):added controller" />
@@ -381,6 +391,8 @@
     <MESSAGE value="feat(store): added controller" />
     <MESSAGE value="feat(store): created response object" />
     <MESSAGE value="feat(products)added object-relational-mapping configuration for products" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(products)added object-relational-mapping configuration for products" />
+    <MESSAGE value="feat(stores):added store repository" />
+    <MESSAGE value="feat(stores): added store repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(stores): added store repository" />
   </component>
 </project>
