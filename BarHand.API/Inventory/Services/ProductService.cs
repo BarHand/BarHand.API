@@ -64,6 +64,16 @@ public class ProductService: IProductService
         }
     }
 
+    public async Task<ProductResponse> GetByIdAsync(long id)
+    {
+        var existingProduct = await _productRepository.FindByIdAsync(id);
+
+        if (existingProduct == null)
+            return new ProductResponse("Product not found.");
+
+        return new ProductResponse(existingProduct);
+    }
+
     public async Task<ProductResponse> UpdateAsync( long productId,Product product)
     {
         //validate if product exists
