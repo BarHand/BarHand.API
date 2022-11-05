@@ -5,7 +5,9 @@
     <projectFile profileName="IIS Express">BarHand.API/BarHand.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="feat(store): implemented object mapping configuration" />
+    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="feat(store)implemented object mapping configuration">
+      <change beforePath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +81,7 @@
       <updated>1667063322114</updated>
       <workItem from="1667063332784" duration="2011000" />
       <workItem from="1667239613518" duration="13957000" />
-      <workItem from="1667622144786" duration="6579000" />
+      <workItem from="1667622144786" duration="6923000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667063373422</created>
@@ -361,7 +363,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667629752014</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="feat(store):implemented object mapping configuration">
+      <created>1667629827134</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1667629827134</updated>
+    </task>
+    <task id="LOCAL-00042" summary="feat(store):implemented object mapping configuration">
+      <created>1667629956663</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1667629956663</updated>
+    </task>
+    <task id="LOCAL-00043" summary="feat(store)implemented object mapping configuration">
+      <created>1667630040185</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1667630040185</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,8 +405,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="chore: added needed package dependencies" />
-    <MESSAGE value="feat(products): added product entity." />
     <MESSAGE value="feat(products): added object-relational mapping constrain rules." />
     <MESSAGE value="chore: added base repository" />
     <MESSAGE value="chore: implemented unit of work" />
@@ -407,6 +428,8 @@
     <MESSAGE value="feat(stores):added store repository" />
     <MESSAGE value="feat(stores): added store repository" />
     <MESSAGE value="feat(store): implemented object mapping configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(store): implemented object mapping configuration" />
+    <MESSAGE value="feat(store):implemented object mapping configuration" />
+    <MESSAGE value="feat(store)implemented object mapping configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(store)implemented object mapping configuration" />
   </component>
 </project>
