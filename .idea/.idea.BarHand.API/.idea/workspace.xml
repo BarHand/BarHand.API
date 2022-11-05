@@ -5,9 +5,9 @@
     <projectFile profileName="IIS Express">BarHand.API/BarHand.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="chore: removed useless classes.">
+    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarHand.API/Inventory/Controllers/ProductsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Inventory/Controllers/ProductsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +20,6 @@
         <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Inventory/Controllers/ProductsController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Inventory/Resources/ProductResource.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Shared/Persistence/Contexts/AppDbContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -87,6 +82,7 @@
       <updated>1667063322114</updated>
       <workItem from="1667063332784" duration="2011000" />
       <workItem from="1667239613518" duration="13957000" />
+      <workItem from="1667622144786" duration="2723000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667063373422</created>
