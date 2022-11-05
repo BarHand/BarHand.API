@@ -5,7 +5,10 @@
     <projectFile profileName="IIS Express">BarHand.API/BarHand.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="feat(products)added object-relational-mapping configuration for products" />
+    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="feat(store): created response object">
+      <change afterPath="$PROJECT_DIR$/BarHand.API/Stores/Domain/Services/IStoreService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +82,7 @@
       <updated>1667063322114</updated>
       <workItem from="1667063332784" duration="2011000" />
       <workItem from="1667239613518" duration="13957000" />
-      <workItem from="1667622144786" duration="4060000" />
+      <workItem from="1667622144786" duration="4773000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667063373422</created>
@@ -298,7 +301,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667627204686</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="feat(store): created response object">
+      <created>1667627358230</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1667627358230</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat(store): created response object">
+      <created>1667627585994</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1667627585994</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +336,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="chore: Added needed package dependencies." />
     <MESSAGE value="chore: added mysql connection string." />
     <MESSAGE value="chore: added needed package dependencies" />
     <MESSAGE value="feat(products): added product entity." />
@@ -344,6 +360,7 @@
     <MESSAGE value="feat(store):added controller" />
     <MESSAGE value="feat(products) added object-relational-mapping configuration for products" />
     <MESSAGE value="feat(products)added object-relational-mapping configuration for products" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(products)added object-relational-mapping configuration for products" />
+    <MESSAGE value="feat(store): created response object" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(store): created response object" />
   </component>
 </project>
