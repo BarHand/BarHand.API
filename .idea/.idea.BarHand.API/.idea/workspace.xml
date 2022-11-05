@@ -6,8 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="feat(store): created response object">
-      <change afterPath="$PROJECT_DIR$/BarHand.API/Stores/Domain/Services/IStoreService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarHand.API/Stores/Domain/Repositories/StoreRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Stores/Domain/Repositories/IStoreRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <updated>1667063322114</updated>
       <workItem from="1667063332784" duration="2011000" />
       <workItem from="1667239613518" duration="13957000" />
-      <workItem from="1667622144786" duration="4773000" />
+      <workItem from="1667622144786" duration="5616000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667063373422</created>
@@ -315,7 +315,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667627585994</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="feat(store): added controller">
+      <created>1667627975846</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1667627975846</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat(store): created response object">
+      <created>1667628055573</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1667628055573</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,11 +369,11 @@
     <MESSAGE value="chore: removed useless classes." />
     <MESSAGE value="feat(stores): added store repository" />
     <MESSAGE value="feat(store): implemented object mapping configuration" />
-    <MESSAGE value="feat(store): added controller" />
     <MESSAGE value="feat(products): added object-relational-mapping configuration for products" />
     <MESSAGE value="feat(store):added controller" />
     <MESSAGE value="feat(products) added object-relational-mapping configuration for products" />
     <MESSAGE value="feat(products)added object-relational-mapping configuration for products" />
+    <MESSAGE value="feat(store): added controller" />
     <MESSAGE value="feat(store): created response object" />
     <option name="LAST_COMMIT_MESSAGE" value="feat(store): created response object" />
   </component>
