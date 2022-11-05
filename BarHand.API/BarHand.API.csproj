@@ -18,6 +18,7 @@
       <Folder Include="Stores\Controllers" />
       <Folder Include="Stores\Domain" />
       <Folder Include="Stores\Persistence\Repositories" />
+      <Folder Include="Stores\Resources" />
     </ItemGroup>
 
 </Project>
