@@ -15,7 +15,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Stores\Domain\Models" />
       <Folder Include="Stores\Domain\Repositories" />
       <Folder Include="Stores\Domain\Services" />
       <Folder Include="Stores\Persistence\Repositories" />
