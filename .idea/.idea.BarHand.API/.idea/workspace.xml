@@ -5,8 +5,8 @@
     <projectFile profileName="IIS Express">BarHand.API/BarHand.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="feat(store)implemented object mapping configuration">
-      <change beforePath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/BarHand.API.csproj" afterDir="false" />
+    <list default="true" id="6c0f3370-19a4-4f33-97bc-d814ff7dc124" name="Changes" comment="feat(stores): implemented stores controller">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,9 @@
       </map>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/jorge/RiderProjects/BarHand.API/BarHand.API/Shared/Persistence/Contexts/AppDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -32,10 +35,12 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;HotReloadSettingsPage&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -74,14 +79,15 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="02d4f383-030b-45cf-b926-36c5ac40d053" name="Changes" comment="" />
+      <changelist id="6c0f3370-19a4-4f33-97bc-d814ff7dc124" name="Changes" comment="" />
       <created>1667063322114</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667063322114</updated>
       <workItem from="1667063332784" duration="2011000" />
       <workItem from="1667239613518" duration="13957000" />
-      <workItem from="1667622144786" duration="6923000" />
+      <workItem from="1668034721750" duration="9774000" />
+      <workItem from="1668132473640" duration="4961000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667063373422</created>
@@ -223,168 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667327828802</updated>
     </task>
-    <task id="LOCAL-00021" summary="feat(store): added controller">
-      <created>1667626025733</created>
+    <task id="LOCAL-00021" summary="feat(stores): implemented stores controller">
+      <created>1668140001239</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1667626025733</updated>
+      <updated>1668140001239</updated>
     </task>
-    <task id="LOCAL-00022" summary="feat(store): added controller">
-      <created>1667626162034</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1667626162034</updated>
-    </task>
-    <task id="LOCAL-00023" summary="feat(stores): added store repository">
-      <created>1667626289011</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1667626289011</updated>
-    </task>
-    <task id="LOCAL-00024" summary="feat(store): implemented object mapping configuration">
-      <created>1667626378051</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1667626378051</updated>
-    </task>
-    <task id="LOCAL-00025" summary="feat(store): added controller">
-      <created>1667626438583</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1667626438583</updated>
-    </task>
-    <task id="LOCAL-00026" summary="feat(store): added controller">
-      <created>1667626531992</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1667626531992</updated>
-    </task>
-    <task id="LOCAL-00027" summary="feat(products): added object-relational-mapping configuration for products">
-      <created>1667626732912</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1667626732912</updated>
-    </task>
-    <task id="LOCAL-00028" summary="feat(products) added object-relational-mapping configuration for products">
-      <created>1667626830609</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1667626830609</updated>
-    </task>
-    <task id="LOCAL-00029" summary="feat(store):added controller">
-      <created>1667626894771</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1667626894771</updated>
-    </task>
-    <task id="LOCAL-00030" summary="feat(products) added object-relational-mapping configuration for products">
-      <created>1667627062188</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1667627062189</updated>
-    </task>
-    <task id="LOCAL-00031" summary="feat(products)added object-relational-mapping configuration for products">
-      <created>1667627204686</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1667627204686</updated>
-    </task>
-    <task id="LOCAL-00032" summary="feat(store): created response object">
-      <created>1667627358230</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1667627358230</updated>
-    </task>
-    <task id="LOCAL-00033" summary="feat(store): created response object">
-      <created>1667627585994</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1667627585994</updated>
-    </task>
-    <task id="LOCAL-00034" summary="feat(store): added controller">
-      <created>1667627975846</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1667627975846</updated>
-    </task>
-    <task id="LOCAL-00035" summary="feat(store): created response object">
-      <created>1667628055573</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1667628055573</updated>
-    </task>
-    <task id="LOCAL-00036" summary="feat(products)added object-relational-mapping configuration for products">
-      <created>1667628995703</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1667628995704</updated>
-    </task>
-    <task id="LOCAL-00037" summary="feat(stores):added store repository">
-      <created>1667629217941</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1667629217941</updated>
-    </task>
-    <task id="LOCAL-00038" summary="feat(stores): added store repository">
-      <created>1667629442896</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1667629442896</updated>
-    </task>
-    <task id="LOCAL-00039" summary="feat(stores): added store repository">
-      <created>1667629591088</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1667629591088</updated>
-    </task>
-    <task id="LOCAL-00040" summary="feat(store): implemented object mapping configuration">
-      <created>1667629752014</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1667629752014</updated>
-    </task>
-    <task id="LOCAL-00041" summary="feat(store):implemented object mapping configuration">
-      <created>1667629827134</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1667629827134</updated>
-    </task>
-    <task id="LOCAL-00042" summary="feat(store):implemented object mapping configuration">
-      <created>1667629956663</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1667629956663</updated>
-    </task>
-    <task id="LOCAL-00043" summary="feat(store)implemented object mapping configuration">
-      <created>1667630040185</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1667630040185</updated>
-    </task>
-    <option name="localTasksCounter" value="44" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +257,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="chore: Added needed package dependencies." />
+    <MESSAGE value="chore: added mysql connection string." />
+    <MESSAGE value="chore: added needed package dependencies" />
+    <MESSAGE value="feat(products): added product entity." />
     <MESSAGE value="feat(products): added object-relational mapping constrain rules." />
     <MESSAGE value="chore: added base repository" />
     <MESSAGE value="chore: implemented unit of work" />
@@ -419,17 +277,7 @@
     <MESSAGE value="feat(products): added incoming and outgoing mapping configuration for product." />
     <MESSAGE value="feat(products): added resource conversion for getting all products; also created extension for mode state to ease in order to error messages handling" />
     <MESSAGE value="chore: removed useless classes." />
-    <MESSAGE value="feat(products): added object-relational-mapping configuration for products" />
-    <MESSAGE value="feat(store):added controller" />
-    <MESSAGE value="feat(products) added object-relational-mapping configuration for products" />
-    <MESSAGE value="feat(store): added controller" />
-    <MESSAGE value="feat(store): created response object" />
-    <MESSAGE value="feat(products)added object-relational-mapping configuration for products" />
-    <MESSAGE value="feat(stores):added store repository" />
-    <MESSAGE value="feat(stores): added store repository" />
-    <MESSAGE value="feat(store): implemented object mapping configuration" />
-    <MESSAGE value="feat(store):implemented object mapping configuration" />
-    <MESSAGE value="feat(store)implemented object mapping configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(store)implemented object mapping configuration" />
+    <MESSAGE value="feat(stores): implemented stores controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(stores): implemented stores controller" />
   </component>
 </project>

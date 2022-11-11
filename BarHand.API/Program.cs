@@ -1,5 +1,6 @@
 using BarHand.API.Inventory.Domain.Repositories;
 using BarHand.API.Inventory.Domain.Services;
+using BarHand.API.Stores.Domain.Models;
 using BarHand.API.Inventory.Persistence.Repositories;
 using BarHand.API.Inventory.Services;
 using BarHand.API.Shared.Domain.Repositories;

@@ -1,6 +1,7 @@
 ﻿using BarHand.API.Inventory.Domain.Models;
 using BarHand.API.Shared.Extensions;
 using BarHand.API.Suppliers.Domain.Models;
+using BarHand.API.Stores.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BarHand.API.Shared.Persistence.Contexts;
@@ -9,6 +10,8 @@ public class AppDbContext : DbContext
 {
     public DbSet<Product> Products { get; set; }
     public DbSet<Supplier> Suppliers { get; set; }
+    
+    public DbSet<Store> Stores { get; set; }
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -62,6 +65,28 @@ public class AppDbContext : DbContext
             .IsRequired().HasMaxLength(200);
         builder.Entity<Supplier>().Property(p => p.Likes)
             .IsRequired();
+        
+        //stores
+        builder.Entity<Store>().ToTable("Stores");
+        builder.Entity<Store>().HasKey(p => p.Id);
+        builder.Entity<Store>().Property(p => p.Id)
+            .IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Store>().Property(p => p.storeName)
+            .IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.address)
+            .IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.ruc)
+            .IsRequired();
+        builder.Entity<Store>().Property(p => p.Category)
+            .IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.Description)
+            .IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.Phone)
+            .IsRequired();
+        builder.Entity<Store>().Property(p => p.Email)
+            .IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.Password)
+            .IsRequired().HasMaxLength(200);
         
         //Relationships
         builder.Entity<Supplier>()
