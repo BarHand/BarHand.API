@@ -6,6 +6,10 @@ using BarHand.API.Inventory.Services;
 using BarHand.API.Shared.Domain.Repositories;
 using BarHand.API.Shared.Persistence.Contexts;
 using BarHand.API.Shared.Persistence.Repositories;
+using BarHand.API.Stores.Domain.Repositories;
+using BarHand.API.Stores.Domain.Services;
+using BarHand.API.Stores.Persistence.Repositories;
+using BarHand.API.Stores.Services;
 using BarHand.API.Suppliers.Domain.Repositories;
 using BarHand.API.Suppliers.Domain.Services;
 using BarHand.API.Suppliers.Persistence.Repositories;
@@ -52,6 +56,10 @@ builder.Services.AddAutoMapper(
 builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
 //Stores
+builder.Services.AddScoped<IStoreRepository, StoreRepository>();
+builder.Services.AddScoped<IStoreService, StoreService>();
+
+
 
 var app = builder.Build();
 

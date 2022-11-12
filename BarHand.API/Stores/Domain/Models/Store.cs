@@ -6,10 +6,10 @@ namespace BarHand.API.Stores.Domain.Models;
 [Table("Stores")]
 public class Store
 {
-    public Store()
-    {
-        Products = new List<Product>();
-    }
+   // public Store()
+   // {
+   //     Products = new List<Product>();
+   // }
     
     public int Id { get; set; }
     
@@ -29,6 +29,6 @@ public class Store
     
     public string Password { get; set; }
     
-    public  List<Product> Products { get; set; }
+  //  public  List<Product> Products { get; set; }
 }
 
