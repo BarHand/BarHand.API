@@ -1,6 +1,5 @@
 using BarHand.API.Inventory.Domain.Repositories;
 using BarHand.API.Inventory.Domain.Services;
-using BarHand.API.Stores.Domain.Models;
 using BarHand.API.Inventory.Persistence.Repositories;
 using BarHand.API.Inventory.Services;
 using BarHand.API.Shared.Domain.Repositories;
@@ -50,8 +49,8 @@ builder.Services.AddScoped<IProductService, ProductService>();
 
 //Auto Mapper Configuration
 builder.Services.AddAutoMapper(
-    typeof(BarHand.API.Inventory.Mapping.ModelToResourceProfile),
-    typeof(BarHand.API.Inventory.Mapping.ResourceToModelProfile));
+    typeof(BarHand.API.Mapping.ModelToResourceProfile),
+    typeof(BarHand.API.Mapping.ResourceToModelProfile));
 //Suppliers
 builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
