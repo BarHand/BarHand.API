@@ -6,8 +6,12 @@ public class StoreResource
     public string StoreName { get; set; }
     public string Email { get; set; }
     public string Address { get; set; }
-    public long ruc { get; set; }
-    public string Category { get; set; }
+    public string Name { get; set; }
+
+    public string LastName { get; set; }
+    public long Phone { get; set; }
     public string Password { get; set; }
+
+    public string Image { get; set; }
 }
 

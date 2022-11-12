@@ -71,15 +71,9 @@ public class AppDbContext : DbContext
         builder.Entity<Store>().HasKey(p => p.Id);
         builder.Entity<Store>().Property(p => p.Id)
             .IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<Store>().Property(p => p.storeName)
+        builder.Entity<Store>().Property(p => p.StoreName)
             .IsRequired().HasMaxLength(200);
-        builder.Entity<Store>().Property(p => p.address)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Store>().Property(p => p.ruc)
-            .IsRequired();
-        builder.Entity<Store>().Property(p => p.Category)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Store>().Property(p => p.Description)
+        builder.Entity<Store>().Property(p => p.Address)
             .IsRequired().HasMaxLength(200);
         builder.Entity<Store>().Property(p => p.Phone)
             .IsRequired();
@@ -87,7 +81,13 @@ public class AppDbContext : DbContext
             .IsRequired().HasMaxLength(200);
         builder.Entity<Store>().Property(p => p.Password)
             .IsRequired().HasMaxLength(200);
-        
+        builder.Entity<Store>().Property(p => p.Image)
+            .IsRequired().HasMaxLength(1000);
+        builder.Entity<Store>().Property(p => p.Name)
+            .IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.LastName)
+            .IsRequired().HasMaxLength(200);
+
         //Relationships
         builder.Entity<Supplier>()
             .HasMany(p => p.Products)

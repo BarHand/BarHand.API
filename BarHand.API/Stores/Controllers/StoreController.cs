@@ -55,8 +55,8 @@ public class StoreController:ControllerBase
         if (!result.Success)
             return BadRequest(result.Message);
 
-        var storeResource = _mapper.Map<Store, StoreResource>(result.Resource);
-        return Created(nameof(PostAsync), storeResource);
+      var storeResource = _mapper.Map<Store, StoreResource>(result.Resource);
+        return Created(nameof(PostAsync), resource);
     }
 
 }

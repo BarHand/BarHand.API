@@ -50,10 +50,10 @@ public class StoreService : IStoreService
         var existingStore = await _storeRepository.FindByIdAsync(storeId);
         if (existingStore == null)
         {
-            return new StoreResponse("Mechanic not found ");
+            return new StoreResponse("Store not found ");
         }
 
-        existingStore.storeName = store.storeName;
+        existingStore.StoreName = store.StoreName;
 
         try
         {
