@@ -2,6 +2,13 @@ using BarHand.API.Inventory.Domain.Repositories;
 using BarHand.API.Inventory.Domain.Services;
 using BarHand.API.Inventory.Persistence.Repositories;
 using BarHand.API.Inventory.Services;
+using BarHand.API.Security.Authorization.Handlers.Implementations;
+using BarHand.API.Security.Authorization.Handlers.Interfaces;
+using BarHand.API.Security.Authorization.Settings;
+using BarHand.API.Security.Domain.Repositories;
+using BarHand.API.Security.Domain.Services;
+using BarHand.API.Security.Persistence;
+using BarHand.API.Security.Services;
 using BarHand.API.Shared.Domain.Repositories;
 using BarHand.API.Shared.Persistence.Contexts;
 using BarHand.API.Shared.Persistence.Repositories;
@@ -88,19 +95,28 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 //Inventory Bounded Context Injection Configuration
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
-
-//Auto Mapper Configuration
-builder.Services.AddAutoMapper(
-    typeof(BarHand.API.Mapping.ModelToResourceProfile),
-    typeof(BarHand.API.Mapping.ResourceToModelProfile));
 //Suppliers
 builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
 //Stores
 builder.Services.AddScoped<IStoreRepository, StoreRepository>();
 builder.Services.AddScoped<IStoreService, StoreService>();
+// Security Injection Configuration
+builder.Services.AddScoped<IJwtHandler, JwtHandler>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
+//Auto Mapper Configuration
+builder.Services.AddAutoMapper(
+    typeof(BarHand.API.Mapping.ModelToResourceProfile),
+    typeof(BarHand.API.Mapping.ResourceToModelProfile),
+    typeof(BarHand.API.Security.Mapping.ModelToResourceProfile),
+    typeof(BarHand.API.Security.Mapping.ResourceToModelProfile));
 
+//AppSettingConfiguration
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
+//Application built
 
 var app = builder.Build();
 
