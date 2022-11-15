@@ -32,6 +32,18 @@ public class StoresController:ControllerBase
         var resources = _mapper.Map<IEnumerable<Store>, IEnumerable<StoreResource>>(stores);
         return resources;
     }
+    
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetByIdAsync(long id)
+    {
+        var result = await _storeService.GetByIdAsync(id);
+        if (!result.Success)
+            return BadRequest(result.Message);
+
+        var storeResult = _mapper.Map<Store, StoreResource>(result.Resource);
+
+        return Ok(storeResult);
+    }
 
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveStoreResource resource)

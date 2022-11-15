@@ -29,6 +29,18 @@ public class ProductsController:ControllerBase
         var resources = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductResource>>(products);
         return resources;
     }
+    
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetByIdAsync(long id)
+    {
+        var result = await _productService.GetByIdAsync(id);
+        if (!result.Success)
+            return BadRequest(result.Message);
+
+        var productResult = _mapper.Map<Product, ProductResource>(result.Resource);
+
+        return Ok(productResult);
+    }
 
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveProductResource resource)

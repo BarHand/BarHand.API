@@ -6,7 +6,6 @@ namespace BarHand.API.Stores.Domain.Services;
 public interface IStoreService
 {
     Task<IEnumerable<Store>> ListAsync();
-
     Task<StoreResponse> GetByIdAsync(long id);
 
     Task<StoreResponse> SaveAsync(Store store);

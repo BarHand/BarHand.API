@@ -31,6 +31,16 @@ public class ProductService: IProductService
         return await _productRepository.FindBySupplierIdAsync(supplierId);
     }
 
+    public async Task<ProductResponse> GetByIdAsync(long id)
+    {
+        var existingProduct = await _productRepository.FindByIdAsync(id);
+
+        if (existingProduct == null)
+            return new ProductResponse("Product not found.");
+
+        return new ProductResponse(existingProduct);
+    }
+
     public async Task<ProductResponse> SaveAsync(Product product)
     {
         //validate existence of assigned Supplier

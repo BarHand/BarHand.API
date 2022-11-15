@@ -31,6 +31,19 @@ public class SuppliersController:ControllerBase
         var resources = _mapper.Map<IEnumerable<Supplier>, IEnumerable<SupplierResource>>(suppliers);
         return resources;
     }
+    
+    
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetByIdAsync(long id)
+    {
+        var result = await _supplierService.GetByIdAsync(id);
+        if (!result.Success)
+            return BadRequest(result.Message);
+
+        var supplierResult = _mapper.Map<Supplier, SupplierResource>(result.Resource);
+
+        return Ok(supplierResult);
+    }
 
     [HttpPost]
     [ProducesResponseType(typeof(SupplierResource),201)]
