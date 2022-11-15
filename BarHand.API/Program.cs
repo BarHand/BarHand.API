@@ -21,7 +21,6 @@ using BarHand.API.Suppliers.Domain.Repositories;
 using BarHand.API.Suppliers.Domain.Services;
 using BarHand.API.Suppliers.Persistence.Repositories;
 using BarHand.API.Suppliers.Services;
-using Google.Protobuf.WellKnownTypes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
