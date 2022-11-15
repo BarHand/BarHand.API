@@ -52,8 +52,18 @@ public class StoreService : IStoreService
         {
             return new StoreResponse("Store not found ");
         }
+        
 
+        //Modify field
         existingStore.StoreName = store.StoreName;
+        existingStore.Email = store.Email;
+        existingStore.Address = store.Address;
+        existingStore.Name = store.Name;
+        existingStore.LastName = store.LastName;
+        existingStore.Phone = store.Phone;
+        existingStore.Password = store.Password;
+        existingStore.Image = store.Image;
+        
 
         try
         {

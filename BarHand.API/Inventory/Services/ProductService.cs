@@ -95,6 +95,7 @@ public class ProductService: IProductService
         
         //Modify field
         existingProduct.Name = product.Name;
+        existingProduct.Category = product.Category;
         existingProduct.Description = product.Description;
         existingProduct.Available = product.Available;
         existingProduct.NumberOfSales = product.NumberOfSales;

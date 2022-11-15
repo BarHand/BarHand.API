@@ -24,6 +24,8 @@ public class SaveSupplierResource
     
     [MaxLength(200)]
     public string Description { get; set; }
+    [MaxLength(300)]
+    public string Image { get; set; }
     
     public long Phone { get; set; }
     [Required]

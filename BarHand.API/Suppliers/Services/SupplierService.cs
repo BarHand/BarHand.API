@@ -53,7 +53,26 @@ public class SupplierService:ISupplierService
         {
             return new SupplierResponse("Mechanic not found ");
         }
-        existingSupplier.Name = supplier.Name;
+        
+        
+        //Modify field
+        existingSupplier.SupplierName = supplier.Name;
+        existingSupplier.Name = supplier.Name;  
+        existingSupplier.LastName = supplier.LastName;
+        existingSupplier.Email = supplier.Email;
+        existingSupplier.Address = supplier.Address;
+        existingSupplier.Ruc = supplier.Ruc;
+        existingSupplier.Category = supplier.Category;
+        existingSupplier.Description = supplier.Description;
+        existingSupplier.Phone = supplier.Phone;
+        existingSupplier.Image = supplier.Image;
+        existingSupplier.Likes = supplier.Likes;
+        existingSupplier.Password = supplier.Password;
+        
+        
+        
+       
+        
 
         try
         {
