@@ -18,14 +18,13 @@ public class SaveSupplierResource
     public string Email { get; set; }
     [MaxLength(200)]
     public string Address { get; set; }
-    [Required]
     public long Ruc { get; set; }
     [MaxLength(200)]
     public string Category { get; set; }
-    [Required]
+    
     [MaxLength(200)]
     public string Description { get; set; }
-    [Required]
+    
     public long Phone { get; set; }
     [Required]
     [MaxLength(200)]

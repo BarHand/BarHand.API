@@ -63,20 +63,19 @@ public class AppDbContext : DbContext
         builder.Entity<Supplier>().Property(p => p.Email)
             .IsRequired().HasMaxLength(200);
         builder.Entity<Supplier>().Property(p => p.Address)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Supplier>().Property(p => p.Ruc)
-            .IsRequired();
+            .HasMaxLength(200);
+        builder.Entity<Supplier>().Property(p => p.Ruc);
         builder.Entity<Supplier>().Property(p => p.Category)
-            .IsRequired().HasMaxLength(200);
+            .HasMaxLength(200);
         builder.Entity<Supplier>().Property(p => p.Description)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Supplier>().Property(p => p.Phone)
-            .IsRequired();
+            .HasMaxLength(300);
+        builder.Entity<Supplier>().Property(p => p.Phone);
         builder.Entity<Supplier>().Property(p => p.Password)
             .IsRequired().HasMaxLength(200);
-        builder.Entity<Supplier>().Property(p => p.Likes)
-            .IsRequired();
-        
+        builder.Entity<Supplier>().Property(p => p.Likes);
+        builder.Entity<Supplier>().Property(p => p.Image)
+            .HasMaxLength(300);
+
         //stores
         builder.Entity<Store>().ToTable("Stores");
         builder.Entity<Store>().HasKey(p => p.Id);
@@ -85,15 +84,14 @@ public class AppDbContext : DbContext
         builder.Entity<Store>().Property(p => p.StoreName)
             .IsRequired().HasMaxLength(200);
         builder.Entity<Store>().Property(p => p.Address)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Store>().Property(p => p.Phone)
-            .IsRequired();
+            .HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.Phone);
         builder.Entity<Store>().Property(p => p.Email)
             .IsRequired().HasMaxLength(200);
         builder.Entity<Store>().Property(p => p.Password)
             .IsRequired().HasMaxLength(200);
         builder.Entity<Store>().Property(p => p.Image)
-            .IsRequired().HasMaxLength(1000);
+            .HasMaxLength(1000);
         builder.Entity<Store>().Property(p => p.Name)
             .IsRequired().HasMaxLength(200);
         builder.Entity<Store>().Property(p => p.LastName)

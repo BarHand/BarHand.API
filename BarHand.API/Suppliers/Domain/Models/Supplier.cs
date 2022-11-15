@@ -22,6 +22,8 @@ public class Supplier
     public string Password { get; set; }
     public long Likes { get; set; }
     
+    public string Image { get; set; }
+    
     //Relationships
     
     public  List<Product> Products { get; set; }
