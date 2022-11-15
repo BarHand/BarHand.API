@@ -4,6 +4,7 @@ using BarHand.API.Inventory.Persistence.Repositories;
 using BarHand.API.Inventory.Services;
 using BarHand.API.Security.Authorization.Handlers.Implementations;
 using BarHand.API.Security.Authorization.Handlers.Interfaces;
+using BarHand.API.Security.Authorization.Middleware;
 using BarHand.API.Security.Authorization.Settings;
 using BarHand.API.Security.Domain.Repositories;
 using BarHand.API.Security.Domain.Services;
@@ -139,6 +140,22 @@ if (app.Environment.IsDevelopment())
         options.RoutePrefix = "swagger";
     });
 }
+
+// Configure CORS
+
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
+// Configure Error Handler Middleware
+
+app.UseMiddleware<ErrorHandlerMiddleware>();
+
+// Configure JWT Handling Middleware
+
+app.UseMiddleware<JwtMiddleware>();
+
 
 app.UseHttpsRedirection();
 
