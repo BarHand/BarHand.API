@@ -2,6 +2,14 @@ using BarHand.API.Inventory.Domain.Repositories;
 using BarHand.API.Inventory.Domain.Services;
 using BarHand.API.Inventory.Persistence.Repositories;
 using BarHand.API.Inventory.Services;
+using BarHand.API.Security.Authorization.Handlers.Implementations;
+using BarHand.API.Security.Authorization.Handlers.Interfaces;
+using BarHand.API.Security.Authorization.Middleware;
+using BarHand.API.Security.Authorization.Settings;
+using BarHand.API.Security.Domain.Repositories;
+using BarHand.API.Security.Domain.Services;
+using BarHand.API.Security.Persistence;
+using BarHand.API.Security.Services;
 using BarHand.API.Shared.Domain.Repositories;
 using BarHand.API.Shared.Persistence.Contexts;
 using BarHand.API.Shared.Persistence.Repositories;
@@ -13,7 +21,9 @@ using BarHand.API.Suppliers.Domain.Repositories;
 using BarHand.API.Suppliers.Domain.Services;
 using BarHand.API.Suppliers.Persistence.Repositories;
 using BarHand.API.Suppliers.Services;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +32,47 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(options=>
+{
+    // Add API Documentation Information
+        
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "BarHand API",
+        Description = "BarHand RESTful API",
+        TermsOfService = new Uri("https://barhand.github.io/Landing-Page-BarHand/"),
+        Contact = new OpenApiContact
+        {
+            Name = "BarHand",
+            Url = new Uri("https://barhand.github.io/Landing-Page-BarHand/")
+        },
+        License = new OpenApiLicense
+        {
+            Name = "BarHand Resources License",
+            Url = new Uri("https://barhand.github.io/Landing-Page-BarHand/")
+        }
+    });
+    options.EnableAnnotations();
+    options.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
+    {
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        Description = "JWT Authorization header using the Bearer scheme."
+    });
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "bearerAuth"}
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 
 //Add Data Base Connection
 
@@ -46,19 +96,28 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 //Inventory Bounded Context Injection Configuration
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
-
-//Auto Mapper Configuration
-builder.Services.AddAutoMapper(
-    typeof(BarHand.API.Mapping.ModelToResourceProfile),
-    typeof(BarHand.API.Mapping.ResourceToModelProfile));
 //Suppliers
 builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
 //Stores
 builder.Services.AddScoped<IStoreRepository, StoreRepository>();
 builder.Services.AddScoped<IStoreService, StoreService>();
+// Security Injection Configuration
+builder.Services.AddScoped<IJwtHandler, JwtHandler>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
+//Auto Mapper Configuration
+builder.Services.AddAutoMapper(
+    typeof(BarHand.API.Mapping.ModelToResourceProfile),
+    typeof(BarHand.API.Mapping.ResourceToModelProfile),
+    typeof(BarHand.API.Security.Mapping.ModelToResourceProfile),
+    typeof(BarHand.API.Security.Mapping.ResourceToModelProfile));
 
+//AppSettingConfiguration
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
+//Application built
 
 var app = builder.Build();
 
@@ -80,7 +139,22 @@ using (var context = scope.ServiceProvider.GetService<AppDbContext>())
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
         options.RoutePrefix = string.Empty;
     });
+
 //}
+// Configure CORS
+
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
+// Configure Error Handler Middleware
+
+app.UseMiddleware<ErrorHandlerMiddleware>();
+
+// Configure JWT Handling Middleware
+
+app.UseMiddleware<JwtMiddleware>();
 
 app.UseHttpsRedirection();
 

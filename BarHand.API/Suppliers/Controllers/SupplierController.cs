@@ -5,11 +5,13 @@ using BarHand.API.Suppliers.Domain.Models;
 using BarHand.API.Suppliers.Domain.Services;
 using BarHand.API.Suppliers.Resources;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace BarHand.API.Suppliers.Controllers;
 [ApiController]
 [Route("/api/v1/[controller]")]
 [Produces(MediaTypeNames.Application.Json)]
+[SwaggerTag("Create, read, update and delete Supplier")]
 public class SupplierController:ControllerBase
 {
     private readonly ISupplierService _supplierService;
@@ -22,6 +24,7 @@ public class SupplierController:ControllerBase
     }
     
     [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<SupplierResource>),200)]
     public async Task<IEnumerable<SupplierResource>> GetAllAsync()
     {
         var suppliers = await _supplierService.ListAsync();
@@ -30,6 +33,9 @@ public class SupplierController:ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(typeof(SupplierResource),201)]
+    [ProducesResponseType(typeof(List<String>),400)]
+    [ProducesResponseType(500)]
     public async Task<IActionResult> PostAsync([FromBody] SaveSupplierResource resource)
     {
         if (!ModelState.IsValid)
