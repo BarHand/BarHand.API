@@ -8,6 +8,6 @@ public interface ISupplierService
     Task<IEnumerable<Supplier>> ListAsync();
     Task<SupplierResponse> GetByIdAsync(long id);
     Task<SupplierResponse> SaveAsync(Supplier supplier);
-    Task<SupplierResponse> UpdateAsync(long supplierId, Supplier supplier);
+    Task<SupplierResponse> UpdateAsync(long id, Supplier supplier);
     Task<SupplierResponse> DeleteAsync(long id);
 }

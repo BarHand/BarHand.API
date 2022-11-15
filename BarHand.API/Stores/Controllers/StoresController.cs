@@ -63,14 +63,14 @@ public class StoresController:ControllerBase
     }
     
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutAsync(long storeId, [FromBody] SaveStoreResource resource)
+    public async Task<IActionResult> PutAsync(long id, [FromBody] SaveStoreResource resource)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState.GetErrorMessages());
         
         var store = _mapper.Map<SaveStoreResource, Store>(resource);
 
-        var result = await _storeService.UpdateAsync(storeId, store);
+        var result = await _storeService.UpdateAsync(id, store);
         
         if (!result.Success)
             return BadRequest(result.Message);

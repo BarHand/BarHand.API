@@ -10,7 +10,7 @@ public interface IStoreService
 
     Task<StoreResponse> SaveAsync(Store store);
 
-    Task<StoreResponse> UpdateAsync(long storeId, Store store);
+    Task<StoreResponse> UpdateAsync(long id, Store store);
 
     Task<StoreResponse> DeleteAsync(long id);
 }

@@ -60,7 +60,7 @@ public class ProductsController:ControllerBase
     }
     
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutAsync(int id, [FromBody] SaveProductResource resource)
+    public async Task<IActionResult> PutAsync(long id, [FromBody] SaveProductResource resource)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState.GetErrorMessages());
@@ -78,7 +78,7 @@ public class ProductsController:ControllerBase
     }
     
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteAsync(int id)
+    public async Task<IActionResult> DeleteAsync(long id)
     {
         var result = await _productService.DeleteAsync(id);
         
