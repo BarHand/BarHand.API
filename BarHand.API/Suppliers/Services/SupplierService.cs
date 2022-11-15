@@ -56,7 +56,7 @@ public class SupplierService:ISupplierService
         
         
         //Modify field
-        existingSupplier.SupplierName = supplier.Name;
+        existingSupplier.SupplierName = supplier.SupplierName;
         existingSupplier.Name = supplier.Name;  
         existingSupplier.LastName = supplier.LastName;
         existingSupplier.Email = supplier.Email;
@@ -69,11 +69,6 @@ public class SupplierService:ISupplierService
         existingSupplier.Likes = supplier.Likes;
         existingSupplier.Password = supplier.Password;
         
-        
-        
-       
-        
-
         try
         {
             _supplierRepository.Update(existingSupplier);

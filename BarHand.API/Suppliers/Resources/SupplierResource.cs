@@ -13,5 +13,6 @@ public class SupplierResource
     public string Description { get; set; }
     public long Phone { get; set; }
     public string Password { get; set; }
+    public string Image { get; set; }
     public long Likes { get; set; } 
 }
