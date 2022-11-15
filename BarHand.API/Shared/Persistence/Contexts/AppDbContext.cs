@@ -50,7 +50,7 @@ public class AppDbContext : DbContext
             .IsRequired();
         
         //Supplier Configuration
-        builder.Entity<Supplier>().ToTable("Supplier");
+        builder.Entity<Supplier>().ToTable("Suppliers");
         builder.Entity<Supplier>().HasKey(p => p.Id);
         builder.Entity<Supplier>().Property(p => p.Id)
             .IsRequired().ValueGeneratedOnAdd();

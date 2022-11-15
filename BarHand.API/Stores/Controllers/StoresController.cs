@@ -13,13 +13,13 @@ namespace BarHand.API.Stores.Controllers;
 [ApiController]
 [Route("/api/v1/[controller]")]
 [Produces(MediaTypeNames.Application.Json)]
-public class StoreController:ControllerBase
+public class StoresController:ControllerBase
 {
 
     private readonly IStoreService _storeService;
     private readonly IMapper _mapper;
 
-    public StoreController(IStoreService storeService, IMapper mapper)
+    public StoresController(IStoreService storeService, IMapper mapper)
     {
         _storeService = storeService;
         _mapper = mapper;

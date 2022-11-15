@@ -12,12 +12,12 @@ namespace BarHand.API.Suppliers.Controllers;
 [Route("/api/v1/[controller]")]
 [Produces(MediaTypeNames.Application.Json)]
 [SwaggerTag("Create, read, update and delete Supplier")]
-public class SupplierController:ControllerBase
+public class SuppliersController:ControllerBase
 {
     private readonly ISupplierService _supplierService;
     private readonly IMapper _mapper;
 
-    public SupplierController(ISupplierService supplierService, IMapper mapper)
+    public SuppliersController(ISupplierService supplierService, IMapper mapper)
     {
         _supplierService = supplierService;
         _mapper = mapper;
