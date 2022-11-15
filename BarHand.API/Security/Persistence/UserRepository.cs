@@ -4,7 +4,7 @@ using BarHand.API.Shared.Persistence.Contexts;
 using BarHand.API.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace BarHand.API.Security.Persistence.Repositories;
+namespace BarHand.API.Security.Persistence;
 
 public class UserRepository: BaseRepository, IUserRepository
 {
