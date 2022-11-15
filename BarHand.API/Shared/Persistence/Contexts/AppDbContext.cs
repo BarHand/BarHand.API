@@ -1,4 +1,5 @@
 ﻿using BarHand.API.Inventory.Domain.Models;
+using BarHand.API.Security.Domain.Models;
 using BarHand.API.Shared.Extensions;
 using BarHand.API.Suppliers.Domain.Models;
 using BarHand.API.Stores.Domain.Models;
@@ -12,6 +13,8 @@ public class AppDbContext : DbContext
     public DbSet<Supplier> Suppliers { get; set; }
     
     public DbSet<Store> Stores { get; set; }
+    
+    public DbSet<User> Users { get; set; }
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -21,6 +24,14 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+        
+        //Users
+        builder.Entity<User>().ToTable("Users");
+        builder.Entity<User>().HasKey(p => p.Id);
+        builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<User>().Property(p => p.Username).IsRequired().HasMaxLength(100);
+        builder.Entity<User>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+        builder.Entity<User>().Property(p => p.LastName).IsRequired().HasMaxLength(100);
 
         //Products Configuration
         builder.Entity<Product>().ToTable("Products");
