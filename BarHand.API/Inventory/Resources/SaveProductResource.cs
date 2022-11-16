@@ -19,4 +19,8 @@ public class SaveProductResource
     public bool Available { get; set; }
     [Required]
     public long SupplierId { get; set; }
+    [Required]
+    public string Image { get; set; }
+    [Required]
+    public int Price { get; set; }
 }

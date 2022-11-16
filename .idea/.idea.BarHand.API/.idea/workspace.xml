@@ -5,8 +5,14 @@
     <projectFile profileName="IIS Express">BarHand.API/BarHand.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c0f3370-19a4-4f33-97bc-d814ff7dc124" name="Changes" comment="feat(stores): implemented stores controller">
+    <list default="true" id="6c0f3370-19a4-4f33-97bc-d814ff7dc124" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_11_2022_23_19__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_11_2022_23_19__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_11_2022_23_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_11_2022_23_33__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarHand.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarHand.API/Inventory/Domain/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Inventory/Domain/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarHand.API/Inventory/Resources/ProductResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Inventory/Resources/ProductResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarHand.API/Inventory/Resources/SaveProductResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Inventory/Resources/SaveProductResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarHand.API/Inventory/Services/ProductService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Inventory/Services/ProductService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +27,29 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/jorge/RiderProjects/BarHand.API/BarHand.API/Shared/Persistence/Contexts/AppDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2f10f2a1f3bbdbc3696823de50e6726ba2ae7f8cf2e6dfc487a9c0b8c1f7b4/ConfigurationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/526ae08c38c8abe14c81f688f3b9bc8b471aeac46b5ea30bdeefec56ce6cc7/DbContextOptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/52cd844476ec4091838909409447be01a23688/_ec32c/IEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/538811d0fba15c61b743814ea8b7193d48cfbb84a1a53c5db2512b1b329330/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5537b9e21af444fc76a1b1d423f8f023b222fe31212cbfc30a14aa2d032710/NotSupportedException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/829d6ac6e62b9bee9ef8e79e827d87d0c31a7c2eefbc354135d9a8f2c4deb/Mapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74d71dba7c925c5924d4deec63ced5d22eafcd5e4356b229f51d6bc642e1/PropertyBuilder`.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Inventory/Services/ProductService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Stores/Services/StoreService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Suppliers/Resources/SaveSupplierResource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Suppliers/Resources/SaveSupplierResource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Suppliers/Resources/SupplierResource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Suppliers/Services/SupplierService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/delam/OneDrive - Universidad Peruana de Ciencias/Project NetCore/BarHand.API/BarHand.API/Suppliers/Services/SupplierService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GomTPpF84ah4lb2QNw32TPizRb" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -236,7 +258,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668140001239</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update">
+      <created>1668555953674</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1668555953674</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update">
+      <created>1668556669168</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1668556669168</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +314,7 @@
     <MESSAGE value="feat(products): added resource conversion for getting all products; also created extension for mode state to ease in order to error messages handling" />
     <MESSAGE value="chore: removed useless classes." />
     <MESSAGE value="feat(stores): implemented stores controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(stores): implemented stores controller" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

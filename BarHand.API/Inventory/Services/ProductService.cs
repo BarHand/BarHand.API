@@ -99,6 +99,8 @@ public class ProductService: IProductService
         existingProduct.Description = product.Description;
         existingProduct.Available = product.Available;
         existingProduct.NumberOfSales = product.NumberOfSales;
+        existingProduct.Price = product.Price;
+        existingProduct.Image = product.Image;
 
         //perform update
         try
