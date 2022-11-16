@@ -13,6 +13,7 @@ public class ProductResource
     public int NumberOfSales { get; set; }
     public bool Available { get; set; }
     public long SupplierId { get; set; }
+    public int Rating { get; set; }
     
     public SupplierResource Supplier { get; set; }
 
