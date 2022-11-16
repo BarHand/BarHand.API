@@ -28,9 +28,9 @@ public class UserService : IUserService
 
     public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest request)
     {
-        var user = await _userRepository.FindByUserNameAsync(request.Username);
+        var user = await _userRepository.FindByNameAsync(request.Username);
         Console.WriteLine($"Request: {request.Username}, {request.Password}");
-        Console.WriteLine($"User: {user.Id}, {user.Name}, {user.LastName}, {user.Username}, {user.PasswordHash}");
+        Console.WriteLine($"User: {user.Id}, {user.Email}, {user.LastName}, {user.Name}, {user.PasswordHash}");
         
         // Perform validation
         if (user == null || !BCryptNet.Verify(request.Password, user.PasswordHash))
@@ -68,7 +68,7 @@ public class UserService : IUserService
     {
         // Validate
 
-        if (_userRepository.ExistsByUsername(request.Username))
+        if (_userRepository.ExistsByName(request.Username))
             throw new AppException($"Username '{request.Username}' is already taken");
         
         // Map request to user entity
@@ -94,7 +94,7 @@ public class UserService : IUserService
         var user = GetById(id);
         
         // Validate
-        var existingUserWithName = await _userRepository.FindByUserNameAsync(request.Username);
+        var existingUserWithName = await _userRepository.FindByNameAsync(request.Username);
 
         if (existingUserWithName != null && existingUserWithName.Id.Equals(id))
             throw new AppException($"Username '{request.Username}' is already taken");

@@ -27,14 +27,14 @@ public class UserRepository: BaseRepository, IUserRepository
         return await _context.Users.FindAsync(id);
     }
 
-    public async Task<User> FindByUserNameAsync(string username)
+    public async Task<User> FindByNameAsync(string username)
     {
-        return await _context.Users.SingleOrDefaultAsync(x=>x.Username==username);
+        return await _context.Users.SingleOrDefaultAsync(x=>x.Name==username);
     }
 
-    public bool ExistsByUsername(string username)
+    public bool ExistsByName(string username)
     {
-        return _context.Users.Any(x => x.Username == username);
+        return _context.Users.Any(x => x.Name == username);
     }
 
     public User FindById(long id)
