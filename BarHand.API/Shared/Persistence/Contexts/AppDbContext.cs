@@ -29,8 +29,8 @@ public class AppDbContext : DbContext
         builder.Entity<User>().ToTable("Users");
         builder.Entity<User>().HasKey(p => p.Id);
         builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<User>().Property(p => p.Username).IsRequired().HasMaxLength(100);
         builder.Entity<User>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+        builder.Entity<User>().Property(p => p.Email).IsRequired().HasMaxLength(100);
         builder.Entity<User>().Property(p => p.LastName).IsRequired().HasMaxLength(100);
 
         //Products Configuration
@@ -52,40 +52,27 @@ public class AppDbContext : DbContext
         //Supplier Configuration
         builder.Entity<Supplier>().ToTable("Suppliers");
         builder.Entity<Supplier>().HasKey(p => p.Id);
-        builder.Entity<Supplier>().Property(p => p.Id)
-            .IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<Supplier>().Property(p => p.SupplierName)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Supplier>().Property(p => p.Name)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Supplier>().Property(p => p.LastName)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Supplier>().Property(p => p.Email)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Supplier>().Property(p => p.Address)
-            .HasMaxLength(200);
+        builder.Entity<Supplier>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Supplier>().Property(p => p.SupplierName).IsRequired().HasMaxLength(200);
+        builder.Entity<Supplier>().Property(p => p.Name).IsRequired().HasMaxLength(200);
+        builder.Entity<Supplier>().Property(p => p.LastName).IsRequired().HasMaxLength(200);
+        builder.Entity<Supplier>().Property(p => p.Email).IsRequired().HasMaxLength(200);
+        builder.Entity<Supplier>().Property(p => p.Address).HasMaxLength(200);
         builder.Entity<Supplier>().Property(p => p.Ruc);
-        builder.Entity<Supplier>().Property(p => p.Category)
-            .HasMaxLength(200);
-        builder.Entity<Supplier>().Property(p => p.Description)
-            .HasMaxLength(300);
+        builder.Entity<Supplier>().Property(p => p.Category).HasMaxLength(200);
+        builder.Entity<Supplier>().Property(p => p.Description).HasMaxLength(300);
         builder.Entity<Supplier>().Property(p => p.Phone);
-        builder.Entity<Supplier>().Property(p => p.Password)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Supplier>().Property(p => p.Likes);
-        builder.Entity<Supplier>().Property(p => p.Image)
-            .HasMaxLength(300);
+        builder.Entity<Supplier>().Property(p => p.Password).IsRequired().HasMaxLength(200);
+        builder.Entity<Supplier>().Property(p => p.Likes).HasDefaultValue(1);
+        builder.Entity<Supplier>().Property(p => p.Image).HasMaxLength(300);
 
         //stores
         builder.Entity<Store>().ToTable("Stores");
         builder.Entity<Store>().HasKey(p => p.Id);
-        builder.Entity<Store>().Property(p => p.Id)
-            .IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<Store>().Property(p => p.StoreName)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Store>().Property(p => p.Address)
-            .HasMaxLength(200);
-        builder.Entity<Store>().Property(p => p.Phone);
+        builder.Entity<Store>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Store>().Property(p => p.StoreName).IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.Address).HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.Phone).ValueGeneratedNever();
         builder.Entity<Store>().Property(p => p.Email)
             .IsRequired().HasMaxLength(200);
         builder.Entity<Store>().Property(p => p.Password)
@@ -108,4 +95,6 @@ public class AppDbContext : DbContext
         //Apply Snake Case Naming Convention
         builder.UseSnakeCaseNamingConvention();
     }
+    
+    
 }
