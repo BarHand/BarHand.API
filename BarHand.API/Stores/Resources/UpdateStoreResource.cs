@@ -2,8 +2,9 @@
 
 namespace BarHand.API.Stores.Resources;
 
-public class SaveStoreResource
+public class UpdateStoreResource
 {
+    
     [Required]
     [MaxLength(200)]
     public string Name { get; set; }
@@ -20,4 +21,7 @@ public class SaveStoreResource
     [MaxLength(200)]
     public string Password { get; set; }
     
+    public string Image { get; set; }
+    public long Phone { get; set; }
+    public string Address { get; set; }
 }

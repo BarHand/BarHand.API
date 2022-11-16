@@ -28,15 +28,15 @@ public class UserService : IUserService
 
     public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest request)
     {
-        var user = await _userRepository.FindByNameAsync(request.Username);
-        Console.WriteLine($"Request: {request.Username}, {request.Password}");
+        var user = await _userRepository.FindByEmailAsync(request.Email);
+        Console.WriteLine($"Request: {request.Email}, {request.Password}");
         Console.WriteLine($"User: {user.Id}, {user.Email}, {user.LastName}, {user.Name}, {user.PasswordHash}");
         
         // Perform validation
         if (user == null || !BCryptNet.Verify(request.Password, user.PasswordHash))
         {
             Console.WriteLine("Authentication Error");
-            throw new AppException("Username or password is incorrect");
+            throw new AppException("Email or password is incorrect");
         }
         
         Console.WriteLine("Authentication successful. About to generate token");
@@ -45,7 +45,7 @@ public class UserService : IUserService
         var response = _mapper.Map<AuthenticateResponse>(user);
         
         // Token is generated
-        Console.WriteLine($"Response: {response.Id}, {response.Username}");
+        Console.WriteLine($"Response: {response.Id}, {response.Email}");
         response.Token = _jwtHandler.GenerateToken(user);
         
         Console.WriteLine($"Generated token is {response.Token}");
@@ -68,8 +68,8 @@ public class UserService : IUserService
     {
         // Validate
 
-        if (_userRepository.ExistsByName(request.Username))
-            throw new AppException($"Username '{request.Username}' is already taken");
+        if (_userRepository.ExistsByEmail(request.Email))
+            throw new AppException($"Email '{request.Email}' is already taken");
         
         // Map request to user entity
         var user = _mapper.Map<User>(request);
@@ -94,10 +94,10 @@ public class UserService : IUserService
         var user = GetById(id);
         
         // Validate
-        var existingUserWithName = await _userRepository.FindByNameAsync(request.Username);
+        var existingUserWithName = await _userRepository.FindByEmailAsync(request.Email);
 
         if (existingUserWithName != null && existingUserWithName.Id.Equals(id))
-            throw new AppException($"Username '{request.Username}' is already taken");
+            throw new AppException($"Email '{request.Email}' is already taken");
         
         // Hash Password if it was entered
         if (!string.IsNullOrEmpty(request.Password))

@@ -63,12 +63,12 @@ public class StoresController:ControllerBase
     }
     
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutAsync(long id, [FromBody] SaveStoreResource resource)
+    public async Task<IActionResult> PutAsync(long id, [FromBody] UpdateStoreResource resource)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState.GetErrorMessages());
         
-        var store = _mapper.Map<SaveStoreResource, Store>(resource);
+        var store = _mapper.Map<UpdateStoreResource, Store>(resource);
 
         var result = await _storeService.UpdateAsync(id, store);
         
@@ -81,9 +81,9 @@ public class StoresController:ControllerBase
     }
     
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteAsync(long storeId)
+    public async Task<IActionResult> DeleteAsync(long id)
     {
-        var result = await _storeService.DeleteAsync(storeId);
+        var result = await _storeService.DeleteAsync(id);
         
         if (!result.Success)
             return BadRequest(result.Message);
