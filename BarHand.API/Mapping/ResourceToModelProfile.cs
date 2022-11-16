@@ -15,6 +15,7 @@ public class ResourceToModelProfile:Profile
         CreateMap<SaveProductResource, Product>();
         CreateMap<SaveSupplierResource, Supplier>();
         CreateMap<UpdateStoreResource, Store>();
+        CreateMap<UpdateSupplierResource, Supplier>();
         CreateMap<SaveStoreResource, Store>();
     }
 }
