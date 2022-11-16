@@ -66,12 +66,12 @@ public class SuppliersController:ControllerBase
     }
     
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutAsync(long id, [FromBody] SaveSupplierResource resource)
+    public async Task<IActionResult> PutAsync(long id, [FromBody] UpdateSupplierResource resource)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState.GetErrorMessages());
         
-        var supplier = _mapper.Map<SaveSupplierResource, Supplier>(resource);
+        var supplier = _mapper.Map<UpdateSupplierResource, Supplier>(resource);
 
         var result = await _supplierService.UpdateAsync(id, supplier);
         
