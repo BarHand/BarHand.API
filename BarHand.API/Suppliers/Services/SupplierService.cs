@@ -51,7 +51,7 @@ public class SupplierService:ISupplierService
         var existingSupplier = await _supplierRepository.FindByIdAsync(supplierId);
         if (existingSupplier == null)
         {
-            return new SupplierResponse("Mechanic not found ");
+            return new SupplierResponse("Supplier not found ");
         }
         
         
@@ -66,7 +66,6 @@ public class SupplierService:ISupplierService
         existingSupplier.Description = supplier.Description;
         existingSupplier.Phone = supplier.Phone;
         existingSupplier.Image = supplier.Image;
-        existingSupplier.Likes = supplier.Likes;
         existingSupplier.Password = supplier.Password;
         
         try
