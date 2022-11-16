@@ -36,18 +36,13 @@ public class AppDbContext : DbContext
         //Products Configuration
         builder.Entity<Product>().ToTable("Products");
         builder.Entity<Product>().HasKey(p => p.Id);
-        builder.Entity<Product>().Property(p => p.Id)
-            .IsRequired().ValueGeneratedOnAdd();// is required
-        builder.Entity<Product>().Property(p => p.Name)
-            .IsRequired().HasMaxLength(200);//tamaño max de 200 
-        builder.Entity<Product>().Property(p => p.Category)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Product>().Property(p => p.Description)
-            .IsRequired().HasMaxLength(200);;
-        builder.Entity<Product>().Property(p => p.NumberOfSales)
-            .IsRequired();
-        builder.Entity<Product>().Property(p => p.Available)
-            .IsRequired();
+        builder.Entity<Product>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();// is required
+        builder.Entity<Product>().Property(p => p.Name).IsRequired().HasMaxLength(200);//tamaño max de 200 
+        builder.Entity<Product>().Property(p => p.Category).IsRequired().HasMaxLength(200);
+        builder.Entity<Product>().Property(p => p.Description).IsRequired().HasMaxLength(200);;
+        builder.Entity<Product>().Property(p => p.NumberOfSales).IsRequired();
+        builder.Entity<Product>().Property(p => p.Available).IsRequired();
+        builder.Entity<Product>().Property(p => p.Rating).IsRequired().HasDefaultValue(1);;
         
         //Supplier Configuration
         builder.Entity<Supplier>().ToTable("Suppliers");
@@ -73,16 +68,12 @@ public class AppDbContext : DbContext
         builder.Entity<Store>().Property(p => p.StoreName).IsRequired().HasMaxLength(200);
         builder.Entity<Store>().Property(p => p.Address).HasMaxLength(200);
         builder.Entity<Store>().Property(p => p.Phone).ValueGeneratedNever();
-        builder.Entity<Store>().Property(p => p.Email)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Store>().Property(p => p.Password)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Store>().Property(p => p.Image)
-            .HasMaxLength(1000);
-        builder.Entity<Store>().Property(p => p.Name)
-            .IsRequired().HasMaxLength(200);
-        builder.Entity<Store>().Property(p => p.LastName)
-            .IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.Email).IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.Password).IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.Image).HasMaxLength(1000);
+        builder.Entity<Store>().Property(p => p.Name).IsRequired().HasMaxLength(200);
+        builder.Entity<Store>().Property(p => p.LastName).IsRequired().HasMaxLength(200);
+        
 
         //Relationships
         builder.Entity<Supplier>()
