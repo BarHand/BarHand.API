@@ -30,6 +30,4 @@ public class SaveSupplierResource
     [Required]
     [MaxLength(200)]
     public string Password { get; set; }
-    [Required]
-    public long Likes { get; set; } 
 }
