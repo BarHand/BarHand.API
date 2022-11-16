@@ -12,6 +12,7 @@ public class Product
     public int NumberOfSales { get; set; }
     public int Price { get; set; }
     public bool Available { get; set; }
+    public int Rating { get; set; }
     
     //Relationship
     public long SupplierId { get; set; }
