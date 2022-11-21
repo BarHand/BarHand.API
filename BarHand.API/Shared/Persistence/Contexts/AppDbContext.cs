@@ -1,4 +1,5 @@
 ﻿using BarHand.API.Inventory.Domain.Models;
+using BarHand.API.Notifications.Domain.Models;
 using BarHand.API.Shared.Extensions;
 using BarHand.API.Suppliers.Domain.Models;
 using BarHand.API.Stores.Domain.Models;
@@ -12,6 +13,8 @@ public class AppDbContext : DbContext
     public DbSet<Supplier> Suppliers { get; set; }
     
     public DbSet<Store> Stores { get; set; }
+
+    public DbSet<Notification> Notifications { get; set; }
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -88,12 +91,38 @@ public class AppDbContext : DbContext
         builder.Entity<Store>().Property(p => p.LastName)
             .IsRequired().HasMaxLength(200);
 
+        //Notifications
+        builder.Entity<Notification>().ToTable("Notifications");
+        builder.Entity<Notification>().HasKey(p => p.Id);
+        builder.Entity<Notification>().Property(p => p.Id)
+            .IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Notification>().Property(p => p.Title)
+            .IsRequired().HasMaxLength(100);
+        builder.Entity<Notification>().Property(p => p.Content)
+            .IsRequired().HasMaxLength(275);
+        builder.Entity<Notification>().Property(p => p.Type)
+            .IsRequired().HasMaxLength(25);
+        builder.Entity<Notification>().Property(p => p.TypeId)
+            .IsRequired().HasMaxLength(25);
+
+
+
         //Relationships
-        builder.Entity<Supplier>()
+        /* builder.Entity<Supplier>()
             .HasMany(p => p.Products)
-            .WithOne(p => p.Supplier)
-            .HasForeignKey(p => p.SupplierId);
-        
+             .WithOne(p => p.Supplier)
+            .HasForeignKey(p => p.SupplierId);*/
+
+        //Relationships
+        /* builder.Entity<Supplier>()
+             .HasMany(p => p.Notifications)
+             .WithOne(p => p.Supplier)
+             .HasForeignKey(p => p.SupplierId).OnDelete(DeleteBehavior.SetNull); */
+
+        /*builder.Entity<Store>()
+            .HasMany(p => p.Notifications)
+            .WithOne(p => p.Store)
+            .HasForeignKey(p => p.StoreId).OnDelete(DeleteBehavior.SetNull); */
 
 
         //Apply Snake Case Naming Convention

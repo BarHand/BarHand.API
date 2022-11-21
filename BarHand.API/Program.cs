@@ -2,6 +2,10 @@ using BarHand.API.Inventory.Domain.Repositories;
 using BarHand.API.Inventory.Domain.Services;
 using BarHand.API.Inventory.Persistence.Repositories;
 using BarHand.API.Inventory.Services;
+using BarHand.API.Notifications.Domain.Repositories;
+using BarHand.API.Notifications.Domain.Services;
+using BarHand.API.Notifications.Persistence.Repositories;
+using BarHand.API.Notifications.Services;
 using BarHand.API.Shared.Domain.Repositories;
 using BarHand.API.Shared.Persistence.Contexts;
 using BarHand.API.Shared.Persistence.Repositories;
@@ -57,8 +61,9 @@ builder.Services.AddScoped<ISupplierService, SupplierService>();
 //Stores
 builder.Services.AddScoped<IStoreRepository, StoreRepository>();
 builder.Services.AddScoped<IStoreService, StoreService>();
-
-
+//Notifications
+builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
 
 var app = builder.Build();
 

@@ -1,16 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using BarHand.API.Inventory.Domain.Models;
+using BarHand.API.Notifications.Domain.Models;
 
 namespace BarHand.API.Stores.Domain.Models;
 
 
 public class Store
 {
-  // public Store()
-   // {
-   //     Products = new List<Product>();
-//     }
-   // 
+   public Store()
+    {
+       // Products = new List<Product>();
+     //  Notifications = new List<Notification>();
+    }
+   
     public long Id { get; set; }
 
     public string Name { get; set; }
@@ -30,5 +32,7 @@ public class Store
     public string Image { get; set; }
 
     //  public  List<Product> Products { get; set; }
+
+   // public List<Notification> Notifications { get; set; }
 }
 
