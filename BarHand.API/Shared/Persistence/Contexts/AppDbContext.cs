@@ -102,7 +102,7 @@ public class AppDbContext : DbContext
         builder.Entity<Store>()
             .HasMany(p => p.Orders)
             .WithOne(p => p.Store)
-            .HasForeignKey(p => p.storeId);
+            .HasForeignKey(p => p.StoreId);
         
 
 

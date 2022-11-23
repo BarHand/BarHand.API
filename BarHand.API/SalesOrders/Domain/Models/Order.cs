@@ -6,7 +6,7 @@ public class Order
 {
     public long Id { get; set; }
     //relationships
-    public long storeId { get; set; }
+    public long StoreId { get; set; }
     public Store Store { get; set; }
     public List<OrderDetail> orderDetails { get; set; }
     
