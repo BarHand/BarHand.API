@@ -9,8 +9,8 @@ public class OrderDetail
     public int QuotedPrice { get; set; }
     
     //Relationship
-   public long orderId { get; set; }
+   public long OrderId { get; set; }
    public Order Order { get; set; }
-   public long productId { get; set; }
+   public long ProductId { get; set; }
    public Product Product { get; set; }
 }
