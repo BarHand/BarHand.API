@@ -27,7 +27,7 @@ public class SaleService:ISaleService
     {
         var existingSale = await _saleRepository.FindByIdAsync(id);
         if (existingSale == null)
-            return new SaleResponse("Supplier not found");
+            return new SaleResponse("Order not found");
 
         return new SaleResponse(existingSale);
     }
