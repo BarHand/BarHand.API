@@ -1,12 +1,12 @@
 using System.ComponentModel.DataAnnotations;
-
-namespace Barhand.API.Sales.Resources;
+using BarHand.API.Inventory.Resources;
+namespace BarHand.API.Sales.Resources;
 
 public class SaleResource{
     [Required]
     public long IdStore{get;set;}
     [Required]
-    public long IdSupplier {get;set;}
+    public long IdProduct {get;set;}
     [Required]
     public bool Available {get; set;}
 }
