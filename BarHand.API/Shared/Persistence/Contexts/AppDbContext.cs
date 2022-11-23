@@ -1,6 +1,7 @@
 ﻿using BarHand.API.Inventory.Domain.Models;
 using BarHand.API.Shared.Extensions;
 using BarHand.API.Suppliers.Domain.Models;
+using BarHand.API.Sales.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BarHand.API.Shared.Persistence.Contexts;
@@ -62,7 +63,16 @@ public class AppDbContext : DbContext
             .IsRequired().HasMaxLength(200);
         builder.Entity<Supplier>().Property(p => p.Likes)
             .IsRequired();
-        
+        //SaleOrder ModelBuilder
+
+        builder.Entity<Sales>().ToTable("SaleOrder");
+        builder.Entity<Sales>().HasKey(p=>p.Id);
+        builder.Entity<Sales>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Sales>().Property(p=>p.IdProduct).IsRequired();
+        builder.Entity<Sales>().Property(p=>p.IdStore).IsRequired();
+        builder.Entity<Sales>().Property(p => p.Stars).IsRequired();
+        builder.Entity<Sales>().Property(p=>p.Available).IsRequired();
+
         //Relationships
         builder.Entity<Supplier>()
             .HasMany(p => p.Products)

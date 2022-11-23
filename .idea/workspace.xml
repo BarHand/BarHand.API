@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="289512ba-ba97-4268-8a2c-55cb3e968427" name="Changes" comment="feat: Resource update">
-      <change beforePath="$PROJECT_DIR$/BarHand.API/Sales/Domain/Models/Sale.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Sales/Domain/Models/Sale.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarHand.API/Sales/Domain/Services/ISaleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Sales/Domain/Services/ISaleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarHand.API/Sales/Resources/SaleResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Sales/Resources/SaleResources.cs" afterDir="false" />
+    <list default="true" id="289512ba-ba97-4268-8a2c-55cb3e968427" name="Changes" comment="feat: Service update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarHand.API/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarHand.API/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +55,7 @@
       <workItem from="1668261609452" duration="41000" />
       <workItem from="1669070528008" duration="9901000" />
       <workItem from="1669225681164" duration="272000" />
-      <workItem from="1669225999199" duration="542000" />
+      <workItem from="1669225999199" duration="1336000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Sale repository">
       <created>1669080381817</created>
@@ -135,7 +134,42 @@
       <option name="project" value="LOCAL" />
       <updated>1669225944596</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: Service update">
+      <created>1669226619733</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669226619733</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: Sale update">
+      <created>1669226632026</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669226632026</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: Resource update">
+      <created>1669226649743</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669226649743</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: Service update">
+      <created>1669226660673</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669226660673</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: Service update">
+      <created>1669226851377</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669226851377</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +194,9 @@
     <MESSAGE value="feat: Sale response" />
     <MESSAGE value="feat: Sale service" />
     <MESSAGE value="feat: Sale save resource" />
+    <MESSAGE value="feat: Sale update" />
     <MESSAGE value="feat: Resource update" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Resource update" />
+    <MESSAGE value="feat: Service update" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Service update" />
   </component>
 </project>
