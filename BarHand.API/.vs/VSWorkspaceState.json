@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Shared",
+    "\\Shared\\Domain\\Repositories",
+    "\\Shared\\Domain\\Services",
+    "\\Shared\\Domain\\Services\\Communication",
+    "\\Stores",
+    "\\Stores\\Controllers",
+    "\\Suppliers\\Controllers",
+    "\\Suppliers\\Domain",
+    "\\Suppliers\\Domain\\Models"
+  ],
+  "PreviewInSolutionExplorer": false
+}

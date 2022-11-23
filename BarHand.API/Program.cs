@@ -10,6 +10,10 @@ using BarHand.API.Security.Domain.Repositories;
 using BarHand.API.Security.Domain.Services;
 using BarHand.API.Security.Persistence;
 using BarHand.API.Security.Services;
+using BarHand.API.Notifications.Domain.Repositories;
+using BarHand.API.Notifications.Domain.Services;
+using BarHand.API.Notifications.Persistence.Repositories;
+using BarHand.API.Notifications.Services;
 using BarHand.API.Shared.Domain.Repositories;
 using BarHand.API.Shared.Persistence.Contexts;
 using BarHand.API.Shared.Persistence.Repositories;
@@ -117,6 +121,9 @@ builder.Services.AddAutoMapper(
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
 //Application built
+//Notifications
+builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
 
 var app = builder.Build();
 

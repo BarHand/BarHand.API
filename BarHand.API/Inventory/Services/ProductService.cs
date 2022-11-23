@@ -45,14 +45,14 @@ public class ProductService: IProductService
     {
         //validate existence of assigned Supplier
         var existingSupplier = await _supplierRepository.FindByIdAsync(product.SupplierId);
-        if (existingSupplier == null)
-            return new ProductResponse("Invalid Supplier");
+       if (existingSupplier == null)
+           return new ProductResponse("Invalid Supplier");
         
         //Validate if title is already used
-        var existingProductWithTitle=await _productRepository.FindByTitleAsync(product.Name);
+       var existingProductWithTitle=await _productRepository.FindByTitleAsync(product.Name);
 
         if (existingProductWithTitle != null)
-            return new ProductResponse("Product name already exists.");
+           return new ProductResponse("Product name already exists.");
         
         //Perform Adding
         try

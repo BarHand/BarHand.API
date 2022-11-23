@@ -1,4 +1,5 @@
 ﻿using BarHand.API.Inventory.Domain.Models;
+using BarHand.API.Notifications.Domain.Models;
 
 namespace BarHand.API.Suppliers.Domain.Models;
 
@@ -7,7 +8,9 @@ public class Supplier
     public Supplier()
     {
         Products = new List<Product>();
+       // Notifications = new List<Notification>();
     }
+
     //Properties
     public long Id { get; set; }
     public string SupplierName { get; set; }
@@ -27,5 +30,7 @@ public class Supplier
     //Relationships
     
     public  List<Product> Products { get; set; }
+    //public List<Notification> Notifications { get; set; }
+
 
 }

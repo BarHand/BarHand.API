@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using BarHand.API.Inventory.Domain.Models;
 using BarHand.API.Inventory.Resources;
+using BarHand.API.Notifications.Domain.Models;
+using BarHand.API.Notifications.Resources;
 using BarHand.API.Stores.Domain.Models;
 using BarHand.API.Stores.Resources;
 using BarHand.API.Suppliers.Domain.Models;
@@ -15,5 +17,6 @@ public class ModelToResourceProfile:Profile
         CreateMap<Product, ProductResource>();
         CreateMap<Supplier, SupplierResource>();
         CreateMap<Store, StoreResource>();
+        CreateMap<Notification, NotificationResource>();
     }
 }

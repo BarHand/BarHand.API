@@ -6,11 +6,11 @@ namespace BarHand.API.Stores.Domain.Models;
 
 public class Store
 {
-    // public Store()
-    // {
-    //     Products = new List<Product>();
+  // public Store()
+   // {
+   //     Products = new List<Product>();
 //     }
-    // 
+   // 
     public long Id { get; set; }
 
     public string Name { get; set; }

@@ -1,5 +1,6 @@
 ﻿using BarHand.API.Inventory.Domain.Models;
 using BarHand.API.Security.Domain.Models;
+using BarHand.API.Notifications.Domain.Models;
 using BarHand.API.Shared.Extensions;
 using BarHand.API.Suppliers.Domain.Models;
 using BarHand.API.Stores.Domain.Models;
@@ -15,6 +16,8 @@ public class AppDbContext : DbContext
     public DbSet<Store> Stores { get; set; }
     
     public DbSet<User> Users { get; set; }
+
+    public DbSet<Notification> Notifications { get; set; }
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -86,6 +89,4 @@ public class AppDbContext : DbContext
         //Apply Snake Case Naming Convention
         builder.UseSnakeCaseNamingConvention();
     }
-    
-    
 }
