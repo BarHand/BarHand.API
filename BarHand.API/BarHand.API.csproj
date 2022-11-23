@@ -20,7 +20,6 @@
 
     <ItemGroup>
       <Folder Include="SalesOrders\Controllers" />
-      <Folder Include="SalesOrders\Resources" />
       <Folder Include="SalesOrders\Services" />
       <Folder Include="Security\Authorization" />
     </ItemGroup>
