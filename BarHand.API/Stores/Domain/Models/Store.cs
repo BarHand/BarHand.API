@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using BarHand.API.Inventory.Domain.Models;
+using BarHand.API.SalesOrders.Domain.Models;
 
 namespace BarHand.API.Stores.Domain.Models;
 
@@ -28,7 +29,10 @@ public class Store
     public string Password { get; set; }
 
     public string? Image { get; set; }
+    
+    //relationships
 
-    //  public  List<Product> Products { get; set; }
+    public  List<Order> Orders { get; set; }
+    
 }
 

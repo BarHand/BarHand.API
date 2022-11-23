@@ -1,6 +1,7 @@
 ﻿using BarHand.API.Inventory.Domain.Models;
 using BarHand.API.Security.Domain.Models;
 using BarHand.API.Notifications.Domain.Models;
+using BarHand.API.SalesOrders.Domain.Models;
 using BarHand.API.Shared.Extensions;
 using BarHand.API.Suppliers.Domain.Models;
 using BarHand.API.Stores.Domain.Models;
@@ -18,6 +19,8 @@ public class AppDbContext : DbContext
     public DbSet<User> Users { get; set; }
 
     public DbSet<Notification> Notifications { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<OrderDetail> orderDetails { get; set; }
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -77,12 +80,29 @@ public class AppDbContext : DbContext
         builder.Entity<Store>().Property(p => p.Name).IsRequired().HasMaxLength(200);
         builder.Entity<Store>().Property(p => p.LastName).IsRequired().HasMaxLength(200);
         
+        //Order
+        builder.Entity<Order>().ToTable("Orders");
+        builder.Entity<Order>().Property(p => p.Id);
+        builder.Entity<Order>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        
+        //OrderDetail
+        builder.Entity<OrderDetail>().ToTable("OrderDetails");
+        builder.Entity<OrderDetail>().HasKey(p => p.Id);
+        builder.Entity<OrderDetail>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<OrderDetail>().Property(p => p.Quantity).IsRequired();
+        builder.Entity<OrderDetail>().Property(p => p.QuotedPrice).IsRequired();
+        
 
         //Relationships
         builder.Entity<Supplier>()
             .HasMany(p => p.Products)
             .WithOne(p => p.Supplier)
             .HasForeignKey(p => p.SupplierId);
+        
+        builder.Entity<Store>()
+            .HasMany(p => p.Orders)
+            .WithOne(p => p.Store)
+            .HasForeignKey(p => p.storeId);
         
 
 

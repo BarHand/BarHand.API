@@ -1,4 +1,6 @@
-﻿using BarHand.API.Suppliers.Domain.Models;
+﻿
+using BarHand.API.SalesOrders.Domain.Models;
+using BarHand.API.Suppliers.Domain.Models;
 
 namespace BarHand.API.Inventory.Domain.Models;
 
@@ -17,8 +19,12 @@ public class Product
     //Relationship
     public long SupplierId { get; set; }
     public Supplier Supplier { get; set; }
-   
     
-    
-    
+    public List<OrderDetail> orderDetails { get; set; }
+
+
+
+
+
+
 }
