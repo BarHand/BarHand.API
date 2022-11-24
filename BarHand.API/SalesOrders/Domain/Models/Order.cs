@@ -8,6 +8,6 @@ public class Order
     //relationships
     public long StoreId { get; set; }
     public Store Store { get; set; }
-    public List<OrderDetail> orderDetails { get; set; }
-    
+    public List<OrderDetail> orderDetails { get; set; } = new List<OrderDetail>();
+
 }

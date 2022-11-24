@@ -3,6 +3,8 @@ using BarHand.API.Inventory.Domain.Models;
 using BarHand.API.Inventory.Resources;
 using BarHand.API.Notifications.Domain.Models;
 using BarHand.API.Notifications.Resources;
+using BarHand.API.SalesOrders.Domain.Models;
+using BarHand.API.SalesOrders.Resources;
 using BarHand.API.Stores.Domain.Models;
 using BarHand.API.Stores.Resources;
 using BarHand.API.Suppliers.Domain.Models;
@@ -20,5 +22,7 @@ public class ResourceToModelProfile:Profile
         CreateMap<UpdateSupplierResource, Supplier>();
         CreateMap<SaveStoreResource, Store>();
         CreateMap<SaveNotificationResource, Notification>();
+        CreateMap<SaveOrderResource, Order>();
+        CreateMap<SaveOrderDetailResource, OrderDetail>();
     }
 }

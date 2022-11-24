@@ -28,15 +28,16 @@ public class OrderService:IOrderService
     {
         return await _orderRepository.FindByStoreIdAsync(storeId);
     }
+    
 
     public async Task<OrderResponse> GetByIdAsync(long id)
     {
-        var existingProduct = await _orderRepository.FindByIdAsync(id);
+        var existingOrder = await _orderRepository.FindByIdAsync(id);
 
-        if (existingProduct == null)
-            return new OrderResponse("Product not found.");
+        if (existingOrder == null)
+            return new OrderResponse("order not found.");
 
-        return new OrderResponse(existingProduct);
+        return new OrderResponse(existingOrder);
     }
 
     public async Task<OrderResponse> SaveAsync(Order order)
@@ -66,6 +67,9 @@ public class OrderService:IOrderService
             return new OrderResponse($"An error  occurred saving the Order: {e.Message}");
         }
     }
+
+    
+   
 
     public async Task<OrderResponse> UpdateAsync(long id, Order order)
     {

@@ -1,5 +1,5 @@
 ﻿using BarHand.API.Inventory.Domain.Models;
-using BarHand.API.Security.Domain.Models;
+
 using BarHand.API.Notifications.Domain.Models;
 using BarHand.API.SalesOrders.Domain.Models;
 using BarHand.API.Shared.Extensions;
@@ -16,7 +16,6 @@ public class AppDbContext : DbContext
     
     public DbSet<Store> Stores { get; set; }
     
-    public DbSet<User> Users { get; set; }
 
     public DbSet<Notification> Notifications { get; set; }
     public DbSet<Order> Orders { get; set; }
@@ -31,13 +30,6 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(builder);
         
-        //Users
-        builder.Entity<User>().ToTable("Users");
-        builder.Entity<User>().HasKey(p => p.Id);
-        builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<User>().Property(p => p.Name).IsRequired().HasMaxLength(100);
-        builder.Entity<User>().Property(p => p.Email).IsRequired().HasMaxLength(100);
-        builder.Entity<User>().Property(p => p.LastName).IsRequired().HasMaxLength(100);
 
         //Products Configuration
         builder.Entity<Product>().ToTable("Products");

@@ -1,5 +1,6 @@
 ﻿using BarHand.API.SalesOrders.Domain.Models;
 using BarHand.API.SalesOrders.Domain.Repositories;
+using BarHand.API.SalesOrders.Services.Communication;
 using BarHand.API.Shared.Persistence.Contexts;
 using BarHand.API.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -24,10 +25,18 @@ public class OrderRepository:BaseRepository,IOrderRepository
         await _context.Orders.AddAsync(order);
     }
 
+    
+
     public async Task<Order> FindByIdAsync(long id)
     {
         return await _context.Orders.FindAsync(id);
     }
+
+    public Task<OrderResponse> FindByNameAndSupplierId(long id, long storeId)
+    {
+        throw new NotImplementedException();
+    }
+
 
     public async Task<IEnumerable<Order>> FindByStoreIdAsync(long storeId)
     {

@@ -1,4 +1,5 @@
-﻿using BarHand.API.Shared.Domain.Repositories;
+﻿using BarHand.API.SalesOrders.Domain.Models;
+using BarHand.API.Shared.Domain.Repositories;
 using BarHand.API.Stores.Domain.Models;
 using BarHand.API.Stores.Domain.Repositories;
 using BarHand.API.Stores.Domain.Services;
@@ -97,5 +98,13 @@ public class StoreService : IStoreService
             return new StoreResponse($"An error occurred while deleting the store: {e.Message}");
         }
     }
+
+    public Store AddOrderToSupplier(long storeId)
+    {
+        return _storeRepository.FindByIdAsync(storeId).Result.addOrder();
+    }
+
+    
+    
 
 }

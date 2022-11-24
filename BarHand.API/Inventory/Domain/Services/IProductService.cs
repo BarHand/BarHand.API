@@ -1,5 +1,6 @@
 ﻿using BarHand.API.Inventory.Domain.Models;
 using BarHand.API.Inventory.Domain.Services.Communication;
+using BarHand.API.SalesOrders.Domain.Models;
 using BarHand.API.Suppliers.Domain.Models;
 
 namespace BarHand.API.Inventory.Domain.Services;

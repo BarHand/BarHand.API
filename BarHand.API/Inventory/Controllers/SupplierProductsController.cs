@@ -10,8 +10,9 @@ namespace BarHand.API.Inventory.Controllers;
 
 
 [ApiController]
-[Route("/api/v1/supplier/{supplierId}/products")]
+[Route("/api/v1/suppliers/{supplierId}/products")]
 [Produces(MediaTypeNames.Application.Json)]
+
 public class SupplierProductsController : ControllerBase
 {
     private readonly IProductService _productService;
@@ -28,7 +29,7 @@ public class SupplierProductsController : ControllerBase
         Summary = "Get All Products for given Supplier",
         Description = "Get existing products associated  with the specified Supplier",
         OperationId = "GetSupplierProducts",
-        Tags = new []{"Supplier"}
+        Tags = new []{"Suppliers"}
     )]
     public async Task<IEnumerable<ProductResource>> GetAllBySupplierIdAsync(long supplierId)
     {

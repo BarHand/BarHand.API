@@ -1,6 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections;
+using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using BarHand.API.Inventory.Domain.Models;
 using BarHand.API.SalesOrders.Domain.Models;
+using BarHand.API.Stores.Domain.Services.Communication;
 
 namespace BarHand.API.Stores.Domain.Models;
 
@@ -32,7 +35,20 @@ public class Store
     
     //relationships
 
-    public  List<Order> Orders { get; set; }
-    
+    public  ICollection<Order> Orders { get; set; }= new Collection<Order>();
+
+    public Store addOrder()
+    {
+        if (Orders == null) {
+            Orders = new Collection<Order>();
+        }
+
+        Order order=new Order();
+            order.StoreId = this.Id;
+        Orders.Add(order);
+        return this;
+    }
+
+
 }
 
